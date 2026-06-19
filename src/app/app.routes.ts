@@ -1,5 +1,6 @@
 import { Routes } from '@angular/router';
 import { Accueil } from './pages/accueil/accueil';
+import { APropos } from './pages/a-propos/a-propos';
 import { Contribution } from './pages/contribution/contribution';
 import { DetailsEspece } from './pages/details-espece/details-espece';
 import { Explorer } from './pages/explorer/explorer';
@@ -12,4 +13,5 @@ export const routes: Routes = [
   { path: 'contribution', component: Contribution },
   { path: 'details-espece', component: DetailsEspece },
   { path: 'stats', component: Stats },
+  { path: 'a-propos', component: APropos },
 ];

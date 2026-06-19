@@ -9,7 +9,7 @@
 <a class="font-body text-body text-on-primary/90 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/explorer">Explorer</a>
 <a class="font-body text-body text-on-primary/90 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/contribution">Contribuer</a>
 <a class="font-body text-body text-on-primary border-b-2 border-primary-container pb-1 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/stats">Statistiques</a>
-<a class="font-body text-body text-on-primary/90 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" href="#">À propos</a>
+<a class="font-body text-body text-on-primary/90 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/a-propos">À propos</a>
 </div>
 <button class="md:hidden text-on-primary">
 <span class="material-symbols-outlined">menu</span>
@@ -17,11 +17,14 @@
 </div>
 </nav>
 <!-- Header / Hero Section -->
-<header class="relative pt-xl pb-lg px-md md:px-lg bg-gradient-to-br from-tertiary to-tertiary-container overflow-hidden">
-<div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.2) 0%, transparent 50%);"></div>
+<header class="relative pt-xl pb-lg px-md md:px-lg overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A highly detailed, stylized top-down map of a modern university campus in Burkina Faso, featuring vibrant green areas, precise pathways, and contemporary institutional buildings. The aesthetic is clean, light-mode, and scientific with a soft ambient glow, fitting for an environmental monitoring dashboard." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDpn8yX-gWaNTMlx52m9wLEQGAoZbHD3tpWmNpcxqgoca_iMUhZF1cDuRwbIh6dFU1gxSdF8RkeTyMT2bPouR8v-_Xn83xEgXMR-983TTSzeDbQ-Dw3LAP0NNKYf2CAeZyo6hg_qq2mX-nrhEVS9uAJ45hqxO6qkTqVsq3zNvzQbgLXOzqt2Jqn7Ie-7B1ojNgbdQZuOb3nNBwLLC3VGJ_9COA9y3KChhFWnlMr34QJH521rp6S4p0UIaqyxBMUBZmsxr2BBewVu3J2')"></div>
+<div class="absolute inset-0 bg-on-background/60 mix-blend-multiply"></div>
+</div>
 <div class="max-w-container-max mx-auto relative z-10 pt-xl">
-<h1 class="font-hero-title text-hero-title text-on-tertiary mb-xs">Biodiversité du Campus</h1>
-<p class="font-section-title text-section-title text-on-tertiary/90 font-light">Tableau de bord</p>
+<h1 class="font-hero-title text-hero-title text-on-primary mb-xs">Biodiversité du Campus</h1>
+<p class="font-section-title text-section-title text-on-primary/90 font-light">Tableau de bord</p>
 </div>
 </header>
 <!-- Main Content Canvas -->
@@ -78,13 +81,13 @@
 <h2 class="font-card-title text-card-title text-on-surface mb-md">Répartition par Catégorie</h2>
 <div class="relative w-full aspect-square flex items-center justify-center">
 <!-- Simulated SVG Donut Chart -->
-<svg class="w-4/5 h-4/5 transform -rotate-90" viewbox="0 0 100 100">
+<svg class="w-4/5 h-4/5 transform -rotate-90" viewBox="0 0 100 100">
 <!-- Flora -->
-<circle class="transition-all duration-500" cx="50" cy="50" fill="transparent" r="40" stroke="#005a15" stroke-dasharray="251.2" stroke-dashoffset="50" stroke-width="15"></circle>
+<circle class="transition-all duration-500" cx="50" cy="50" fill="transparent" r="40" stroke="#005a15" strokeDasharray="251.2" strokeDashoffset="50" strokeWidth="15"></circle>
 <!-- Fauna -->
-<circle class="transition-all duration-500" cx="50" cy="50" fill="transparent" r="40" stroke="#fdaf11" stroke-dasharray="251.2" stroke-dashoffset="200" stroke-width="15"></circle>
+<circle class="transition-all duration-500" cx="50" cy="50" fill="transparent" r="40" stroke="#fdaf11" strokeDasharray="251.2" strokeDashoffset="200" strokeWidth="15"></circle>
 <!-- Fungi -->
-<circle class="transition-all duration-500" cx="50" cy="50" fill="transparent" r="40" stroke="#9e001f" stroke-dasharray="251.2" stroke-dashoffset="230" stroke-width="15"></circle>
+<circle class="transition-all duration-500" cx="50" cy="50" fill="transparent" r="40" stroke="#9e001f" strokeDasharray="251.2" strokeDashoffset="230" strokeWidth="15"></circle>
 </svg>
 <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
 <span class="font-section-title text-section-title text-on-surface">342</span>
@@ -100,9 +103,9 @@
 <!-- Bar Chart Card -->
 <div class="bg-surface-container-lowest rounded-[24px] p-md ambient-shadow flex-grow">
 <h2 class="font-card-title text-card-title text-on-surface mb-md">Observations par Mois</h2>
-<div class="w-full h-48 flex items-end justify-between gap-1 mt-auto pb-xs border-b border-outline-variant relative">
+<div class="w-full h-48 flex items-end justify-between gap-1 pb-xs border-b border-outline-variant relative">
 <!-- Simulated SVG Bar Chart for cleaner hover -->
-<svg class="w-full h-full absolute bottom-0" preserveaspectratio="none" viewbox="0 0 100 100">
+<svg class="w-full h-full absolute bottom-0" preserveAspectRatio="none" viewBox="0 0 100 100">
 <rect class="chart-bar fill-primary transition-colors cursor-pointer" height="20" rx="2" width="10" x="5" y="80"></rect>
 <rect class="chart-bar fill-primary transition-colors cursor-pointer" height="40" rx="2" width="10" x="20" y="60"></rect>
 <rect class="chart-bar fill-primary transition-colors cursor-pointer" height="60" rx="2" width="10" x="35" y="40"></rect>
@@ -199,7 +202,7 @@
 <div class="flex gap-md">
 <a class="font-body text-body text-surface-variant hover:text-primary-fixed-dim transition-colors focus:ring-2 focus:ring-secondary-fixed rounded-sm px-1" routerLink="/explorer">Explorer</a>
 <a class="font-body text-body text-surface-variant hover:text-primary-fixed-dim transition-colors focus:ring-2 focus:ring-secondary-fixed rounded-sm px-1" routerLink="/contribution">Contribuer</a>
-<a class="font-body text-body text-surface-variant hover:text-primary-fixed-dim transition-colors focus:ring-2 focus:ring-secondary-fixed rounded-sm px-1" href="#">À propos</a>
+<a class="font-body text-body text-surface-variant hover:text-primary-fixed-dim transition-colors focus:ring-2 focus:ring-secondary-fixed rounded-sm px-1" routerLink="/a-propos">À propos</a>
 <a class="font-body text-body text-surface-variant hover:text-primary-fixed-dim transition-colors focus:ring-2 focus:ring-secondary-fixed rounded-sm px-1" href="#">Contact</a>
 </div>
 </div>

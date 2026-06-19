@@ -1,0 +1,156 @@
+<!-- TopNavBar -->
+<nav
+  class="fixed top-0 left-0 w-full z-50 transition-all"
+  [class]="scrolled() ? 'bg-on-surface/90 backdrop-blur-md shadow-md' : 'bg-transparent'"
+>
+<div class="flex justify-between items-center px-lg py-md max-w-container-max mx-auto">
+<div class="font-hero-title-mobile text-hero-title-mobile font-bold text-on-primary">
+            2iE BioMap
+        </div>
+<div class="hidden md:flex items-center gap-md">
+<a class="font-body text-body text-on-primary/90 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/accueil">Accueil</a>
+<a class="font-body text-body text-on-primary/90 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/explorer">Explorer</a>
+<a class="font-body text-body text-on-primary/90 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/contribution">Contribuer</a>
+<a class="font-body text-body text-on-primary/90 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/stats">Statistiques</a>
+<a class="font-body text-body text-on-primary border-b-2 border-primary-container pb-1 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/a-propos">À propos</a>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-[512px] w-full overflow-hidden flex flex-col items-center justify-center pt-xl px-md">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A breathtaking, wide landscape photograph of the 2iE campus in Ouagadougou, Burkina Faso during golden hour. The scene features lush campus greenery, distinct modern educational architecture, and clear skies. The lighting is warm and inviting, highlighting a perfect harmony between nature and human endeavor. High-resolution, professional architectural landscape photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8et_9koAC5WG9qg23qjaN8q28nRSBk4IE7x_2aCUr_end_LwHsf0JvXlWK9V5mVVSNoFfGwIYcs2LzEc4xcdK1zZ0A07kHasUYWRVEQpd_I80s78sv9i22rfMYZSJZrv7-um6r4gviWmK7AEdHcidNCcOMql_zCSTc-YCpNYBWC4MtJpVjvsUA4rcDkwwCFXiPqf2Sx_WbDzVY8NsRSSJmoP2v6wHPU8RuvGlAGtHwoOlfMaUbQbBhgGY7DxrR3TNmPWVWp_MC0oN"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface via-on-surface/40 to-transparent"></div>
+</div>
+<div class="relative z-10 text-center max-w-4xl mx-auto flex flex-col items-center gap-md">
+<h1 class="font-hero-title text-hero-title font-bold text-on-primary drop-shadow-md">
+                Documenter le vivant, préserver l'avenir
+            </h1>
+<p class="font-card-title text-card-title text-surface-container-highest max-w-2xl drop-shadow-sm">
+                L'initiative 2iE BioMap unit science et communauté pour cartographier la richesse biologique de notre campus.
+            </p>
+</div>
+</header>
+<main class="flex-grow">
+<!-- 2. Our Mission -->
+<section class="py-xl px-md md:px-lg max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg items-center">
+<div>
+<h2 class="font-section-title text-section-title text-primary mb-md relative inline-block">
+                        Notre Mission
+                        <span class="absolute bottom-0 left-0 w-1/2 h-1 bg-secondary-container rounded-full"></span>
+</h2>
+</div>
+<div class="font-body text-body text-on-surface-variant space-y-4">
+<p>
+                        BioMap est bien plus qu'une simple base de données. C'est un registre vivant de notre écosystème : arbres majestueux, oiseaux locaux et insectes fascinants qui partagent notre espace d'étude et de vie.
+                    </p>
+<p>
+                        Conçu pour éveiller les consciences écologiques, ce projet transforme chaque étudiant, chercheur et membre du personnel en acteur clé de la préservation de notre environnement immédiat au cœur du Burkina Faso.
+                    </p>
+</div>
+</div>
+</section>
+<!-- 3. Key Objectives -->
+<section class="py-lg px-md md:px-lg max-w-container-max mx-auto bg-surface-container-lowest rounded-[24px] shadow-md mb-xl">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md p-md">
+<!-- Card 1 -->
+<div class="bg-surface p-sm rounded-[16px] border border-outline-variant hover:shadow-md transition-all flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full bg-surface-container-high text-tertiary flex items-center justify-center mb-sm group-hover:bg-tertiary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">eco</span>
+</div>
+<h3 class="font-card-title text-card-title text-on-surface mb-xs">Recensement</h3>
+<p class="font-caption text-caption text-on-surface-variant">
+                        Cataloguer avec précision les espèces de flore et de faune présentes sur le campus.
+                    </p>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface p-sm rounded-[16px] border border-outline-variant hover:shadow-md transition-all flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full bg-surface-container-high text-primary flex items-center justify-center mb-sm group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">school</span>
+</div>
+<h3 class="font-card-title text-card-title text-on-surface mb-xs">Éducation</h3>
+<p class="font-caption text-caption text-on-surface-variant">
+                        Soutenir la recherche étudiante et fournir des données réelles pour l'apprentissage.
+                    </p>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface p-sm rounded-[16px] border border-outline-variant hover:shadow-md transition-all flex flex-col items-center text-center group">
+<div class="w-16 h-16 rounded-full bg-surface-container-high text-secondary-container flex items-center justify-center mb-sm group-hover:bg-secondary-container group-hover:text-white transition-colors">
+<span class="material-symbols-outlined text-3xl">diversity_3</span>
+</div>
+<h3 class="font-card-title text-card-title text-on-surface mb-xs">Communauté</h3>
+<p class="font-caption text-caption text-on-surface-variant">
+                        Engager chaque membre de 2iE dans une démarche citoyenne de science participative.
+                    </p>
+</div>
+</div>
+</section>
+<!-- 4. The Campus Ecosystem -->
+<section class="py-xl px-md md:px-lg max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-lg items-center">
+<div class="order-2 lg:order-1 rounded-[24px] overflow-hidden shadow-md h-[400px]">
+<img class="w-full h-full object-cover" data-alt="A majestic Baobab tree standing tall on the 2iE campus in Burkina Faso, surrounded by vibrant green grass and smaller local shrubs. Sunlight filters beautifully through the branches, creating a dappled light effect. The setting highlights the rich biodiversity and robust nature of the Sahel region ecosystem. High clarity, nature documentary visual style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0uWS8--VyAArixQzHB3L53n-1fDNKdecgbV2QxZyFi66D3U6ZH8P0Tq_SKj88h797jNj94U58E9RDjJPmhirjuafCrBTRkRPWof5xTcuOEuxGeM6uXhQXu6j9C7fXAIukSmw6UsMLcH0FCYRm76-rU1bDeS4X_-FcKIDkmY1ea-cySNknbXXZtHDWpu8r0seRCCortx6stK7n_M6KjRRMDIhPySdGMr-SvDcr2YCD0Txzwhp54GRyzM8MVsM1HW2E6zxrmemv4rD6"/>
+</div>
+<div class="order-1 lg:order-2">
+<h2 class="font-section-title text-section-title text-on-surface mb-md">
+                        L'Écosystème de notre Campus
+                    </h2>
+<div class="font-body text-body text-on-surface-variant space-y-4">
+<p>
+                            Niché au cœur du Burkina Faso, le campus de 2iE abrite une biodiversité insoupçonnée. Des immenses Baobabs qui offrent leur ombre bienveillante, aux flamboyants éclatants qui marquent les saisons, la flore y est riche et résiliente.
+                        </p>
+<p>
+                            Cette diversité végétale attire une faune variée, faisant de nos allées et jardins de véritables laboratoires à ciel ouvert. Protéger cet environnement commence par le connaître, et c'est le cœur même de notre initiative.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Call to Action -->
+<section class="bg-primary-container text-on-primary py-xl px-md md:px-lg mt-xl text-center shadow-inner relative overflow-hidden">
+<!-- Decorative subtle pattern -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 24px 24px;"></div>
+<div class="relative z-10 max-w-2xl mx-auto">
+<h2 class="font-section-title text-section-title mb-sm">Faites partie de l'aventure</h2>
+<p class="font-body text-body mb-lg text-white/90">
+                    Votre contribution compte. Prenez une photo, identifiez une espèce et aidez-nous à construire la carte de notre biodiversité.
+                </p>
+<a class="inline-flex items-center gap-xs bg-white text-primary-container font-card-title text-card-title px-lg py-sm rounded-full shadow-md hover:shadow-lg hover:-translate-y-1 transition-all duration-200" routerLink="/contribution">
+                    Commencer à contribuer
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest full-width bottom-0 border-t border-outline-variant z-10">
+<div class="w-full py-lg px-md md:px-lg grid grid-cols-1 md:grid-cols-3 gap-md max-w-container-max mx-auto">
+<!-- Brand / Copyright -->
+<div class="flex flex-col gap-sm">
+<span class="font-card-title text-card-title font-bold text-primary">
+                    2iE BioMap
+                </span>
+<span class="font-caption text-caption text-on-surface-variant">
+                    © 2025 2iE BioMap - Institut International d'Ingénierie de l'Eau et de l'Environnement
+                </span>
+</div>
+<!-- Links -->
+<div class="flex flex-col gap-xs font-caption text-caption md:col-span-2 md:items-end justify-center">
+<div class="flex flex-wrap gap-md">
+<a class="text-on-surface-variant hover:text-secondary transition-colors hover:underline decoration-secondary decoration-2 opacity-80 hover:opacity-100" href="#">
+                        Mentions Légales
+                    </a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors hover:underline decoration-secondary decoration-2 opacity-80 hover:opacity-100" href="#">
+                        Contact
+                    </a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors hover:underline decoration-secondary decoration-2 opacity-80 hover:opacity-100" href="#">
+                        Partenaires
+                    </a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors hover:underline decoration-secondary decoration-2 opacity-80 hover:opacity-100" href="#">
+                        Aide
+                    </a>
+</div>
+</div>
+</div>
+</footer>

@@ -12,7 +12,7 @@
 <a class="font-body text-body text-on-primary/90 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/explorer">Explorer</a>
 <a class="font-body text-body text-on-primary/90 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/contribution">Contribuer</a>
 <a class="font-body text-body text-on-primary/90 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/stats">Statistiques</a>
-<a class="font-body text-body text-on-primary/90 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" href="#">À propos</a>
+<a class="font-body text-body text-on-primary/90 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/a-propos">À propos</a>
 </div>
 </div>
 </nav>
@@ -34,13 +34,13 @@
                 Explorez 247 espèces documentées par 89 membres de 2iE
             </p>
 <div class="flex flex-col sm:flex-row gap-md mt-md">
-<button class="bg-primary-container hover:bg-primary-fixed text-on-primary hover:text-on-primary-fixed-variant hover:border-b-4 border-secondary-fixed transition-all px-lg py-sm rounded-[16px] font-card-title text-card-title font-bold shadow-lg hover:shadow-xl active:translate-y-1 active:shadow-md">
+<a routerLink="/explorer" class="bg-primary-container hover:bg-primary-fixed text-on-primary hover:text-on-primary-fixed-variant hover:border-b-4 border-secondary-fixed transition-all px-lg py-sm rounded-[16px] font-card-title text-card-title font-bold shadow-lg hover:shadow-xl active:translate-y-1 active:shadow-md inline-block">
                     Explorer la galerie
-                </button>
-<button class="flex items-center justify-center gap-xs bg-surface-container/20 hover:bg-surface-container/40 backdrop-blur-sm text-on-primary border border-on-primary/30 transition-all px-lg py-sm rounded-[16px] font-card-title text-card-title font-bold">
+                </a>
+<a routerLink="/contribution" class="flex items-center justify-center gap-xs bg-surface-container/20 hover:bg-surface-container/40 backdrop-blur-sm text-on-primary border border-on-primary/30 transition-all px-lg py-sm rounded-[16px] font-card-title text-card-title font-bold">
 <span class="material-symbols-outlined text-[20px]">photo_camera</span>
                     + Ajouter une observation
-                </button>
+                </a>
 </div>
 </div>
 </section>
@@ -365,7 +365,7 @@
 <div class="flex gap-md font-body text-body">
 <a class="text-surface-variant hover:text-primary-fixed-dim transition-colors focus:ring-2 focus:ring-secondary-fixed" routerLink="/explorer">Explorer</a>
 <a class="text-surface-variant hover:text-primary-fixed-dim transition-colors focus:ring-2 focus:ring-secondary-fixed" routerLink="/contribution">Contribuer</a>
-<a class="text-surface-variant hover:text-primary-fixed-dim transition-colors focus:ring-2 focus:ring-secondary-fixed" href="#">À propos</a>
+<a class="text-surface-variant hover:text-primary-fixed-dim transition-colors focus:ring-2 focus:ring-secondary-fixed" routerLink="/a-propos">À propos</a>
 <a class="text-surface-variant hover:text-primary-fixed-dim transition-colors focus:ring-2 focus:ring-secondary-fixed" href="#">Contact</a>
 </div>
 </div>
