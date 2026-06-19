@@ -1,0 +1,183 @@
+<!-- TopNavBar -->
+<nav aria-label="Main Navigation" class="fixed top-0 left-0 w-full z-50 bg-on-surface/90 backdrop-blur-md shadow-md">
+<div class="flex justify-between items-center px-lg py-md max-w-container-max mx-auto">
+<div class="flex items-center gap-xs">
+<span class="font-hero-title-mobile text-hero-title-mobile font-bold text-on-primary">2iE BioMap</span>
+</div>
+<div class="hidden md:flex items-center gap-md">
+<a class="text-on-primary/90 font-body text-body hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/accueil">Accueil</a>
+<a class="text-on-primary/90 font-body text-body hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/explorer">Explorer</a>
+<a aria-current="page" class="text-on-primary border-b-2 border-primary-container pb-1 font-body text-body hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/contribution">Contribuer</a>
+<a class="text-on-primary/90 font-body text-body hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/stats">Statistiques</a>
+<a class="text-on-primary/90 font-body text-body hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" href="#">À propos</a>
+</div>
+</div>
+</nav>
+<!-- Main Content Background -->
+<div class="bg-cover bg-center opacity-40" data-alt="A serene, soft-focus background of a vibrant green campus setting in Burkina Faso. Lush mango trees and diverse flora are visible in the gentle, bright light-mode aesthetic. The scene is illuminated by warm, natural sunlight, creating an inviting, scientific yet natural mood. High fidelity, subtle depth of field." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCr2e4JWHTUXKRmMGgRiF9sdxh3qp0NKra6o_RGIhJa1KnP45tR2o3IRDol01adU10sP-9i_LG40TZjXBUAOVrNWcLRtsU4kqf3ZEg45GpOo8Fu-jIhdHcHJ3EuK2WB0Bxxh7UTYQEAnWSpHpN8L2T3RfzFPRX_drI37sDWreDGeXuaH79aPPkBQoPDwND8TzkM0Edc-Qc1LHtXHRGp0POFFqp5CGwzLXYf_U1FEpqPtOiz1T0HobLbJs4RGoCGysZskFHTMjPn2nk4')"></div>
+<main class="flex-grow pt-[120px] pb-xl px-4 md:px-lg max-w-container-max mx-auto w-full">
+<div class="mb-lg text-center md:text-left">
+<h1 class="font-hero-title text-hero-title text-on-surface mb-xs">Participer à la base de données</h1>
+<p class="font-body text-body text-on-surface-variant max-w-2xl">Aidez-nous à cartographier la biodiversité du campus. Téléchargez une photo et laissez notre IA vous assister dans l'identification.</p>
+</div>
+<div class="flex flex-col lg:flex-row gap-lg">
+<!-- Left Column: Form (55%) -->
+<div class="w-full lg:w-[55%] glass-panel rounded-[24px] p-md md:p-lg ambient-shadow">
+<form action="#" class="space-y-md" method="POST">
+<!-- Upload Area -->
+<div class="border-2 border-dashed border-tertiary-container rounded-[16px] p-xl text-center bg-surface-container-lowest/50 hover:bg-surface-container-lowest transition-colors cursor-pointer group relative overflow-hidden">
+<input accept="image/*" aria-label="Upload photo" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10" type="file"/>
+<div class="flex flex-col items-center justify-center space-y-sm text-tertiary-container group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-[48px]">upload_file</span>
+<span class="font-card-title text-card-title font-medium">Glissez votre photo ici</span>
+<span class="font-caption text-caption text-outline">ou cliquez pour parcourir (JPEG, PNG)</span>
+</div>
+</div>
+<!-- IA Analysis Result (Simulated Active State) -->
+<div class="bg-tertiary-fixed/20 border border-tertiary-fixed-dim rounded-[12px] p-sm flex items-start gap-sm">
+<span class="material-symbols-outlined text-tertiary-container mt-1">check_circle</span>
+<div>
+<h3 class="font-card-title text-card-title text-on-surface">Analyse IA terminée</h3>
+<p class="font-body text-body text-on-surface-variant">Mangifera indica (Manguier) — 94% de confiance</p>
+</div>
+</div>
+<!-- Fields Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-sm md:gap-md">
+<!-- Common Name -->
+<div class="space-y-xs">
+<label class="block font-card-title text-card-title text-on-surface" for="common_name">Nom commun</label>
+<input class="w-full bg-surface-container-lowest border-b-2 border-outline/30 rounded-t-[8px] px-sm py-xs focus:ring-0 focus:border-tertiary-container focus:bg-surface-bright transition-colors font-body text-body text-on-surface placeholder:text-outline-variant" id="common_name" placeholder="Ex: Manguier" type="text" value="Manguier"/>
+</div>
+<!-- Scientific Name -->
+<div class="space-y-xs">
+<label class="block font-card-title text-card-title text-on-surface" for="scientific_name">Nom scientifique</label>
+<input class="w-full bg-surface-container-lowest border-b-2 border-outline/30 rounded-t-[8px] px-sm py-xs focus:ring-0 focus:border-tertiary-container focus:bg-surface-bright transition-colors font-body text-body text-on-surface italic placeholder:text-outline-variant" id="scientific_name" placeholder="Ex: Mangifera indica" type="text" value="Mangifera indica"/>
+</div>
+<!-- Category -->
+<div class="space-y-xs">
+<label class="block font-card-title text-card-title text-on-surface" for="category">Catégorie</label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest border-b-2 border-outline/30 rounded-t-[8px] pl-10 pr-sm py-xs focus:ring-0 focus:border-tertiary-container focus:bg-surface-bright appearance-none font-body text-body text-on-surface" id="category">
+<option selected="" value="plant">Plante / Arbre</option>
+<option value="animal">Animal / Insecte</option>
+<option value="fungi">Champignon</option>
+</select>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-tertiary-container pointer-events-none">forest</span>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Campus Zone -->
+<div class="space-y-xs">
+<label class="block font-card-title text-card-title text-on-surface" for="zone">Zone du campus</label>
+<div class="relative">
+<select class="w-full bg-surface-container-lowest border-b-2 border-outline/30 rounded-t-[8px] px-sm py-xs focus:ring-0 focus:border-tertiary-container focus:bg-surface-bright appearance-none font-body text-body text-on-surface" id="zone">
+<option selected="" value="zone1">Zone Académique (Bat. A-C)</option>
+<option value="zone2">Résidences Étudiantes</option>
+<option value="zone3">Jardins Expérimentaux</option>
+<option value="zone4">Périphérie Campus</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Health Status -->
+<div class="space-y-sm pt-sm">
+<label class="block font-card-title text-card-title text-on-surface">État de santé observé</label>
+<div class="flex flex-wrap gap-sm">
+<label class="flex items-center gap-xs cursor-pointer group">
+<input checked="" class="text-tertiary-container focus:ring-tertiary-container" name="health" type="radio" value="excellent"/>
+<span class="font-body text-body text-on-surface-variant group-hover:text-on-surface transition-colors">Excellent</span>
+</label>
+<label class="flex items-center gap-xs cursor-pointer group">
+<input class="text-tertiary-container focus:ring-tertiary-container" name="health" type="radio" value="bon"/>
+<span class="font-body text-body text-on-surface-variant group-hover:text-on-surface transition-colors">Bon</span>
+</label>
+<label class="flex items-center gap-xs cursor-pointer group">
+<input class="text-secondary focus:ring-secondary" name="health" type="radio" value="moyen"/>
+<span class="font-body text-body text-on-surface-variant group-hover:text-on-surface transition-colors">Signes de stress</span>
+</label>
+<label class="flex items-center gap-xs cursor-pointer group">
+<input class="text-error focus:ring-error" name="health" type="radio" value="mauvais"/>
+<span class="font-body text-body text-on-surface-variant group-hover:text-on-surface transition-colors">Malade / Endommagé</span>
+</label>
+</div>
+</div>
+<!-- Description -->
+<div class="space-y-xs pt-sm">
+<label class="block font-card-title text-card-title text-on-surface" for="description">Notes d'observation</label>
+<textarea class="w-full bg-surface-container-lowest border-b-2 border-outline/30 rounded-t-[8px] px-sm py-xs focus:ring-0 focus:border-tertiary-container focus:bg-surface-bright transition-colors font-body text-body text-on-surface placeholder:text-outline-variant resize-none" id="description" placeholder="Décrivez l'environnement immédiat, le comportement ou des caractéristiques particulières..." rows="3"></textarea>
+</div>
+<!-- Contributor -->
+<div class="space-y-xs pt-sm">
+<label class="block font-card-title text-card-title text-on-surface" for="contributor">Votre nom (Optionnel)</label>
+<input class="w-full bg-surface-container-lowest border-b-2 border-outline/30 rounded-t-[8px] px-sm py-xs focus:ring-0 focus:border-tertiary-container focus:bg-surface-bright transition-colors font-body text-body text-on-surface placeholder:text-outline-variant" id="contributor" placeholder="Étudiant / Chercheur 2iE" type="text"/>
+</div>
+<!-- Submit Button -->
+<div class="pt-md">
+<button class="w-full md:w-auto px-xl py-sm bg-primary text-on-primary font-section-title text-card-title rounded-full hover:bg-primary-container active:scale-95 transition-all ambient-shadow flex items-center justify-center gap-xs group" type="submit">
+<span>Soumettre l'observation</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">send</span>
+</button>
+</div>
+</form>
+</div>
+<!-- Right Column: Live Preview Card (45%) -->
+<div class="w-full lg:w-[45%] lg:sticky lg:top-[120px] self-start">
+<div class="mb-sm flex items-center gap-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+<span class="font-body text-body font-medium uppercase tracking-wider">Aperçu en direct</span>
+</div>
+<!-- Preview Card -->
+<div class="bg-surface-container-lowest rounded-[24px] overflow-hidden ambient-shadow flex flex-col group">
+<div class="relative h-64 w-full overflow-hidden">
+<img class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700" data-alt="A close-up, high-fidelity photograph of a healthy mango tree leaf (Mangifera indica) bathed in warm morning sunlight. The vibrant green tones and intricate leaf veins are highlighted against a softly blurred campus background. Light-mode aesthetic, serene, organic, scientific realism." src="https://lh3.googleusercontent.com/aida-public/AB6AXuClItB3Vlf52pGjHgD7VUS4qqQ3ooemSNY1oY285xewTqZGInSYu7apffp-kHUlkwRcQVwE2y0TGKRoEoOwuO137lo7L4WDDt4AsvhI6zlYfmq336RTb0ZYvTk6_M0AUiPygUBg5bQWNUBqXx3WZy0Eb28blBfrgUqw5DAR9sDbx5O3JbPYcxam1OfD5EP8oZ6T6t0nnXPGbBpB-zng9sRtNKRafwjjzxrednihb0S2veK9r3sL_ELXmr8vhwCqEw0P5Tr8GzR77ftM"/>
+<div class="absolute top-sm right-sm flex gap-2">
+<span class="bg-tertiary-container text-on-tertiary px-3 py-1 rounded-full font-caption text-caption flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-[14px]">eco</span> Plante
+                            </span>
+<span class="bg-surface-container-lowest/90 backdrop-blur-sm text-on-surface px-3 py-1 rounded-full font-caption text-caption shadow-sm">
+                                Nouveau
+                            </span>
+</div>
+</div>
+<div class="p-md flex flex-col gap-sm">
+<div>
+<h2 class="font-section-title text-section-title text-on-surface mb-1 leading-tight">Manguier</h2>
+<p class="font-body text-body text-on-surface-variant italic">Mangifera indica</p>
+</div>
+<div class="flex items-center gap-xs text-on-surface-variant font-caption text-caption">
+<span class="material-symbols-outlined text-[16px] text-tertiary">location_on</span>
+<span>Zone Académique (Bat. A-C)</span>
+</div>
+<div class="h-px w-full bg-outline-variant/30 my-xs"></div>
+<div class="flex items-center justify-between mt-auto">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant font-card-title text-card-title">
+                                    2iE
+                                </div>
+<span class="font-caption text-caption text-on-surface-variant">À l'instant</span>
+</div>
+<span class="flex items-center gap-1 text-tertiary-container font-caption text-caption bg-tertiary-fixed/30 px-2 py-1 rounded-md">
+<span class="material-symbols-outlined text-[14px]">verified</span> IA 94%
+                            </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-on-surface text-surface-bright pt-xl pb-sm px-lg full-width bottom-0 border-t-4 border-primary-container flat">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-md">
+<div class="text-center md:text-left">
+<span class="font-section-title text-section-title font-bold text-on-primary">2iE BioMap</span>
+<p class="font-body text-body text-surface-variant mt-xs">© 2025 2iE BioMap — Ouagadougou, Burkina Faso</p>
+</div>
+<nav aria-label="Footer Navigation" class="flex flex-wrap justify-center gap-sm md:gap-md">
+<a class="font-body text-body text-surface-variant hover:text-primary-fixed-dim transition-colors focus:ring-2 focus:ring-secondary-fixed" routerLink="/explorer">Explorer</a>
+<a class="font-body text-body text-primary-fixed-dim hover:text-primary-fixed-dim transition-colors focus:ring-2 focus:ring-secondary-fixed" routerLink="/contribution">Contribuer</a>
+<a class="font-body text-body text-surface-variant hover:text-primary-fixed-dim transition-colors focus:ring-2 focus:ring-secondary-fixed" href="#">À propos</a>
+<a class="font-body text-body text-surface-variant hover:text-primary-fixed-dim transition-colors focus:ring-2 focus:ring-secondary-fixed" href="#">Contact</a>
+</nav>
+</div>
+</footer>

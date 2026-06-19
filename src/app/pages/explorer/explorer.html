@@ -1,0 +1,160 @@
+<!-- Hero Section with TopNavBar -->
+<header class="relative w-full h-[512px] min-h-[400px] flex items-center justify-center overflow-hidden">
+<!-- Hero Background Image -->
+<div class="absolute inset-0 z-0">
+<div class="w-full h-full bg-cover bg-center" data-alt="A sweeping, cinematic landscape photograph of a lush university campus in Burkina Faso during golden hour. The sunlight casts long, warm shadows across dense, vibrant green foliage and modern architectural elements. The lighting is high-end, soft, and inviting, creating an immersive, nature-focused aesthetic with deep contrasts and glowing highlights." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDYvURjTG0HqTX2sR0OtrkMXEONFvoXcMPf7WYkkrgpw3tYp2biIpceC-aKp--vfbPZBRenVLErG2LaCAX4sVwkFc36hsT2iqOoox6d-KqARx2Evpo-E37mt-hsZ2lb9zxERxH0QrNudu0b7o397Tz89EfiavsvNJO3V57TfZg_GrPGDqkx47ioXb1RyYCpGfu9XtSyD1PuasHQL3PtQINHxvkCQMpI34ZUXyj3kiGCmlp0fQN294pK6-h1pv2tMlar8Ujz5H_gXJOg')"></div>
+<div class="absolute inset-0 bg-on-background/60 mix-blend-multiply"></div>
+</div>
+<!-- TopNavBar (Shared Component) -->
+<nav
+  class="fixed top-0 left-0 w-full z-50 transition-all"
+  [class]="scrolled() ? 'bg-on-surface/90 backdrop-blur-md shadow-md' : 'bg-transparent'"
+>
+<div class="flex justify-between items-center px-lg py-md max-w-container-max mx-auto">
+<div class="flex items-center gap-sm">
+<span class="font-hero-title-mobile text-hero-title-mobile font-bold text-on-primary tracking-tight">2iE BioMap</span>
+</div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center gap-md">
+<a class="font-body text-body text-on-primary/90 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/accueil">Accueil</a>
+<a class="font-body text-body text-on-primary border-b-2 border-primary-container pb-1" routerLink="/explorer">Explorer</a>
+<a class="font-body text-body text-on-primary/90 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/contribution">Contribuer</a>
+<a class="font-body text-body text-on-primary/90 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/stats">Statistiques</a>
+<a class="font-body text-body text-on-primary/90 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" href="#">À propos</a>
+</div>
+</div>
+</nav>
+<!-- Hero Content -->
+<div class="relative z-10 text-center px-sm max-w-3xl mx-auto mt-xl">
+<h1 class="font-hero-title text-hero-title text-on-primary mb-sm">Exploration de la Biodiversité</h1>
+<p class="font-body text-body text-on-primary/90 text-lg max-w-2xl mx-auto">
+                Plongez au cœur de l'écosystème du campus 2iE. Découvrez, identifiez et participez à la cartographie de notre faune et flore locales à travers cette galerie collaborative.
+            </p>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-sm md:px-lg py-lg -mt-sm relative z-20">
+<!-- Search and Filters -->
+<section class="bg-surface-container-lowest rounded-xl ambient-shadow p-sm md:p-md mb-lg flex flex-col md:flex-row gap-md items-center justify-between">
+<!-- Search Bar -->
+<div class="relative w-full md:w-1/3">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-[40px] pr-sm py-xs bg-surface border border-outline-variant rounded-lg font-body text-body text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary focus:border-transparent transition-shadow" placeholder="Rechercher une espèce..." type="text"/>
+</div>
+<!-- Filters -->
+<div class="flex flex-wrap gap-xs items-center justify-center md:justify-end w-full md:w-auto">
+<button class="px-sm py-xs rounded-full font-caption text-caption font-medium bg-on-surface text-surface transition-colors">Tout</button>
+<button class="px-sm py-xs rounded-full font-caption text-caption font-medium bg-tertiary-container/20 text-tertiary hover:bg-tertiary-container/30 transition-colors border border-tertiary-container/30">Arbres</button>
+<button class="px-sm py-xs rounded-full font-caption text-caption font-medium bg-secondary-fixed/50 text-secondary hover:bg-secondary-fixed transition-colors border border-secondary-fixed-dim/30">Animaux</button>
+<button class="px-sm py-xs rounded-full font-caption text-caption font-medium bg-secondary-container/30 text-on-secondary-container hover:bg-secondary-container/50 transition-colors border border-secondary-container/50">Insectes</button>
+<button class="px-sm py-xs rounded-full font-caption text-caption font-medium bg-primary-container/10 text-primary hover:bg-primary-container/20 transition-colors border border-primary-container/20">Champignons</button>
+</div>
+</section>
+<!-- Species Grid -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-md md:gap-lg">
+<!-- Card 1 -->
+<article class="bg-surface-container-lowest rounded-[24px] ambient-shadow hover-lift overflow-hidden flex flex-col cursor-pointer border border-surface-variant/50">
+<div class="relative h-48 w-full">
+<img class="w-full h-full object-cover" data-alt="A vivid, high-resolution macro photograph of a vibrant yellow butterfly resting on a bright green leaf. The background is beautifully blurred into soft, creamy bokeh, emphasizing the intricate patterns on the butterfly's wings. The lighting is natural and bright, capturing the fresh, morning dew aesthetic of a thriving ecosystem." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2DaTvIyCwZ-9YEw9T_El12WnVzsXtGV3GW37B5-si6QwsgKaEsTftAt9TPA33bvTEvVV9-AtreJf9yyOsC1Fa26V3Or3ecfyK9RwnAWyk0Uo8YVjFPMXWnX-ilXdSg8dwQ2bpp89CdG9Ka1XSz0u9JP54k7ecTt4DpkfbAfRqpj5fH2206wvLwJG-7Gkt66Ra2CYX7R84Q7Rmzv0BwdRYjMrMOwV6J7nK7lB3uykNJUyCPjCb1fpf_utWJtJ3EffpohGJE1sFvM_t"/>
+<div class="absolute top-sm right-sm bg-secondary-container text-on-secondary-container px-xs py-[2px] rounded-full font-caption text-caption font-medium shadow-sm backdrop-blur-sm bg-opacity-90">Insectes</div>
+</div>
+<div class="p-sm flex flex-col flex-grow">
+<h3 class="font-card-title text-card-title text-on-surface mb-[2px]">Papillon Monarque</h3>
+<p class="font-caption text-caption text-on-surface-variant italic mb-sm">Danaus plexippus</p>
+<div class="mt-auto pt-sm border-t border-surface-variant flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<div class="w-6 h-6 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">person</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Par Aminata D.</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Il y a 2j</span>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-surface-container-lowest rounded-[24px] ambient-shadow hover-lift overflow-hidden flex flex-col cursor-pointer border border-surface-variant/50">
+<div class="relative h-48 w-full">
+<img class="w-full h-full object-cover" data-alt="A majestic baobab tree standing tall against a clear, pale blue sky. The thick, textured trunk and sprawling branches are captured in sharp detail, conveying a sense of age and resilience. The lighting is strong, direct afternoon sun, casting soft shadows on the dry, sandy earth below. High-end architectural photography style applied to nature." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDboCHEyuVDcoMORgerM95QwByXloxWfqoKLS_yr5V8YsTqT4QmmYiCHXf2ukwbBNSYprp8BouBMQMCiQE7smh4pAtPW0_2T80IyVjkRyWmcYKjqQBULMZ7wq0_SAS8fuM-YjpkwTySJi9sUIPeOLSItBOkbSoKbvAY9LXx-rY4j8gviX81riSAb9xJ9K95wTpBNLIO0WHV6OSxjx37tarx6bxf8thhKIdKwaYMf6lB3eqXq3xIghW9_V1ce32auO4LGzNyYv43lcv5"/>
+<div class="absolute top-sm right-sm bg-tertiary-container text-on-tertiary-container px-xs py-[2px] rounded-full font-caption text-caption font-medium shadow-sm backdrop-blur-sm bg-opacity-90">Arbres</div>
+</div>
+<div class="p-sm flex flex-col flex-grow">
+<h3 class="font-card-title text-card-title text-on-surface mb-[2px]">Baobab Africain</h3>
+<p class="font-caption text-caption text-on-surface-variant italic mb-sm">Adansonia digitata</p>
+<div class="mt-auto pt-sm border-t border-surface-variant flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<div class="w-6 h-6 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">person</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Par Prof. Kaboré</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Il y a 5j</span>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-surface-container-lowest rounded-[24px] ambient-shadow hover-lift overflow-hidden flex flex-col cursor-pointer border border-surface-variant/50">
+<div class="relative h-48 w-full">
+<img class="w-full h-full object-cover" data-alt="A striking close-up of a small, colorful agama lizard basking on a sunlit terracotta stone. The lizard's vibrant orange head and blue body contrast beautifully against the warm, earthy tones of the rock. The depth of field is shallow, isolating the subject in sharp focus while the background melts into a soft, hazy warmth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARXPqpoMJS7W4fId8uCao4TPPvAM6FxDteqQuorYDq0GkVUtMdbpAnwUekMd7l-Py5B3hxVoOcEjYQY-fw1H59m6eiRjsakzsPeb549hgpJZRAxEC9Smaeo6RnLiQ1RUl6fQvNXDKWIMq-0m4EEaa_JuxuGRaCramTMcO-YnOtPRVUsxaDq92uKaTMv3tuvle2LHk5V_U2BxV2FNHRmtN6t3oT97B4PdKKDTpP_mnY33_AHAcANVHykskJNSand4jO9X1qpSQjAzbF"/>
+<div class="absolute top-sm right-sm bg-secondary-fixed text-secondary px-xs py-[2px] rounded-full font-caption text-caption font-medium shadow-sm backdrop-blur-sm bg-opacity-90">Animaux</div>
+</div>
+<div class="p-sm flex flex-col flex-grow">
+<h3 class="font-card-title text-card-title text-on-surface mb-[2px]">Agame des colons</h3>
+<p class="font-caption text-caption text-on-surface-variant italic mb-sm">Agama agama</p>
+<div class="mt-auto pt-sm border-t border-surface-variant flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<div class="w-6 h-6 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">person</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Par Étudiant L2</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Il y a 1 sem</span>
+</div>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="bg-surface-container-lowest rounded-[24px] ambient-shadow hover-lift overflow-hidden flex flex-col cursor-pointer border border-surface-variant/50">
+<div class="relative h-48 w-full">
+<img class="w-full h-full object-cover" data-alt="An atmospheric, low-angle shot of a cluster of delicate, pale white mushrooms growing from rich, dark soil amidst fallen autumn leaves. The scene is illuminated by dappled, soft woodland light filtering through a dense canopy, creating a moody, damp, and organic feel. High-fidelity textures emphasize the fragility of the fungi." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAKT49_tuOcvThUzS1GIGgUsqrU28VoN0n5lO8cg4xJRhA94jAPVlvTBSJ5o2o-3nR11oBLw7iTsOWcZfOYvwmMNPmiKb-65g8v87soo608DhG1Q5xlq82NFm5_q3k7tTQ8CtJIKwmimFP46gRXMhSaYXmoyF3fg7TQTBDTYvCFtX5jAWrAClsHEfIQnQmXCZZg2yASaMZhTIHDnC3Oe9SsNJvYkBnTPy57htec_6g3bAoq_lL5irJDqrqnkjfNA1Vbc31BxwOBNha"/>
+<div class="absolute top-sm right-sm bg-primary-container text-on-primary-container px-xs py-[2px] rounded-full font-caption text-caption font-medium shadow-sm backdrop-blur-sm bg-opacity-90">Champignons</div>
+</div>
+<div class="p-sm flex flex-col flex-grow">
+<h3 class="font-card-title text-card-title text-on-surface mb-[2px]">Coprin Chevelu</h3>
+<p class="font-caption text-caption text-on-surface-variant italic mb-sm">Coprinus comatus</p>
+<div class="mt-auto pt-sm border-t border-surface-variant flex items-center justify-between">
+<div class="flex items-center gap-xs">
+<div class="w-6 h-6 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[14px]">person</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Par Club Bio</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Il y a 2 sem</span>
+</div>
+</div>
+</article>
+</section>
+<!-- Load More Action -->
+<div class="mt-lg flex justify-center">
+<button class="bg-surface-container-lowest border border-outline-variant text-primary font-card-title text-card-title px-lg py-xs rounded-full shadow-sm hover:bg-surface-container transition-colors flex items-center gap-xs group">
+                Charger plus d'espèces
+                <span class="material-symbols-outlined group-hover:translate-y-1 transition-transform">keyboard_arrow_down</span>
+</button>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full bg-on-surface text-surface-bright pt-xl pb-sm px-lg border-t-4 border-primary-container mt-auto">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-md">
+<div class="font-section-title text-section-title font-bold text-on-primary">
+                2iE BioMap
+            </div>
+<ul class="flex flex-wrap gap-md justify-center">
+<li><a class="font-body text-body text-surface-variant hover:text-primary-fixed-dim transition-colors focus:ring-2 focus:ring-secondary-fixed rounded-sm outline-none" routerLink="/explorer">Explorer</a></li>
+<li><a class="font-body text-body text-surface-variant hover:text-primary-fixed-dim transition-colors focus:ring-2 focus:ring-secondary-fixed rounded-sm outline-none" routerLink="/contribution">Contribuer</a></li>
+<li><a class="font-body text-body text-surface-variant hover:text-primary-fixed-dim transition-colors focus:ring-2 focus:ring-secondary-fixed rounded-sm outline-none" href="#">À propos</a></li>
+<li><a class="font-body text-body text-surface-variant hover:text-primary-fixed-dim transition-colors focus:ring-2 focus:ring-secondary-fixed rounded-sm outline-none" href="#">Contact</a></li>
+</ul>
+</div>
+<div class="max-w-container-max mx-auto mt-lg pt-sm border-t border-surface-variant/30 text-center">
+<span class="font-caption text-caption text-surface-variant">© 2025 2iE BioMap — Ouagadougou, Burkina Faso</span>
+</div>
+</footer>

@@ -1,0 +1,209 @@
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-transparent">
+<div class="flex justify-between items-center px-lg py-md max-w-container-max mx-auto">
+<div class="flex items-center gap-xs">
+<span class="font-hero-title-mobile text-hero-title-mobile font-bold text-on-primary">2iE BioMap</span>
+</div>
+<div class="hidden md:flex items-center gap-md">
+<a class="font-body text-body text-on-primary/90 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/accueil">Accueil</a>
+<a class="font-body text-body text-on-primary/90 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/explorer">Explorer</a>
+<a class="font-body text-body text-on-primary/90 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/contribution">Contribuer</a>
+<a class="font-body text-body text-on-primary border-b-2 border-primary-container pb-1 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/stats">Statistiques</a>
+<a class="font-body text-body text-on-primary/90 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" href="#">À propos</a>
+</div>
+<button class="md:hidden text-on-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Header / Hero Section -->
+<header class="relative pt-xl pb-lg px-md md:px-lg bg-gradient-to-br from-tertiary to-tertiary-container overflow-hidden">
+<div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 20% 50%, rgba(255,255,255,0.2) 0%, transparent 50%);"></div>
+<div class="max-w-container-max mx-auto relative z-10 pt-xl">
+<h1 class="font-hero-title text-hero-title text-on-tertiary mb-xs">Biodiversité du Campus</h1>
+<p class="font-section-title text-section-title text-on-tertiary/90 font-light">Tableau de bord</p>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-md md:px-lg py-lg -mt-md relative z-20">
+<!-- KPI Row -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-md mb-lg">
+<!-- Total Species (Green) -->
+<div class="bg-surface-container-lowest rounded-xl p-md ambient-shadow border-l-4 border-tertiary flex items-center justify-between">
+<div>
+<p class="font-caption text-caption text-on-surface-variant uppercase tracking-wider mb-xs">Espèces Recensées</p>
+<p class="font-section-title text-section-title text-on-surface">342</p>
+</div>
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">psychiatry</span>
+</div>
+</div>
+<!-- Total Obs (Blue -> Using surface-tint/primary for context as no specific blue in palette, but will use secondary context) -->
+<div class="bg-surface-container-lowest rounded-xl p-md ambient-shadow border-l-4 border-primary flex items-center justify-between">
+<div>
+<p class="font-caption text-caption text-on-surface-variant uppercase tracking-wider mb-xs">Observations Totales</p>
+<p class="font-section-title text-section-title text-on-surface">1,204</p>
+</div>
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">visibility</span>
+</div>
+</div>
+<!-- Contributors (Yellow) -->
+<div class="bg-surface-container-lowest rounded-xl p-md ambient-shadow border-l-4 border-secondary-container flex items-center justify-between">
+<div>
+<p class="font-caption text-caption text-on-surface-variant uppercase tracking-wider mb-xs">Contributeurs Actifs</p>
+<p class="font-section-title text-section-title text-on-surface">89</p>
+</div>
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">group</span>
+</div>
+</div>
+<!-- Old Trees (Red) -->
+<div class="bg-surface-container-lowest rounded-xl p-md ambient-shadow border-l-4 border-primary-container flex items-center justify-between">
+<div>
+<p class="font-caption text-caption text-on-surface-variant uppercase tracking-wider mb-xs">Arbres Remarquables</p>
+<p class="font-section-title text-section-title text-on-surface">45</p>
+</div>
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[24px]">forest</span>
+</div>
+</div>
+</section>
+<!-- Complex Layout: Charts & Map -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-md mb-lg">
+<!-- Left Column: Charts -->
+<div class="lg:col-span-1 flex flex-col gap-md">
+<!-- Donut Chart Card -->
+<div class="bg-surface-container-lowest rounded-[24px] p-md ambient-shadow">
+<h2 class="font-card-title text-card-title text-on-surface mb-md">Répartition par Catégorie</h2>
+<div class="relative w-full aspect-square flex items-center justify-center">
+<!-- Simulated SVG Donut Chart -->
+<svg class="w-4/5 h-4/5 transform -rotate-90" viewbox="0 0 100 100">
+<!-- Flora -->
+<circle class="transition-all duration-500" cx="50" cy="50" fill="transparent" r="40" stroke="#005a15" stroke-dasharray="251.2" stroke-dashoffset="50" stroke-width="15"></circle>
+<!-- Fauna -->
+<circle class="transition-all duration-500" cx="50" cy="50" fill="transparent" r="40" stroke="#fdaf11" stroke-dasharray="251.2" stroke-dashoffset="200" stroke-width="15"></circle>
+<!-- Fungi -->
+<circle class="transition-all duration-500" cx="50" cy="50" fill="transparent" r="40" stroke="#9e001f" stroke-dasharray="251.2" stroke-dashoffset="230" stroke-width="15"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+<span class="font-section-title text-section-title text-on-surface">342</span>
+<span class="font-caption text-caption text-on-surface-variant">Espèces</span>
+</div>
+</div>
+<div class="flex justify-center gap-sm mt-md">
+<div class="flex items-center gap-xs"><span class="w-3 h-3 rounded-full bg-tertiary"></span><span class="font-caption text-caption">Flore</span></div>
+<div class="flex items-center gap-xs"><span class="w-3 h-3 rounded-full bg-secondary-container"></span><span class="font-caption text-caption">Faune</span></div>
+<div class="flex items-center gap-xs"><span class="w-3 h-3 rounded-full bg-primary"></span><span class="font-caption text-caption">Fonges</span></div>
+</div>
+</div>
+<!-- Bar Chart Card -->
+<div class="bg-surface-container-lowest rounded-[24px] p-md ambient-shadow flex-grow">
+<h2 class="font-card-title text-card-title text-on-surface mb-md">Observations par Mois</h2>
+<div class="w-full h-48 flex items-end justify-between gap-1 mt-auto pb-xs border-b border-outline-variant relative">
+<!-- Simulated SVG Bar Chart for cleaner hover -->
+<svg class="w-full h-full absolute bottom-0" preserveaspectratio="none" viewbox="0 0 100 100">
+<rect class="chart-bar fill-primary transition-colors cursor-pointer" height="20" rx="2" width="10" x="5" y="80"></rect>
+<rect class="chart-bar fill-primary transition-colors cursor-pointer" height="40" rx="2" width="10" x="20" y="60"></rect>
+<rect class="chart-bar fill-primary transition-colors cursor-pointer" height="60" rx="2" width="10" x="35" y="40"></rect>
+<rect class="chart-bar fill-primary transition-colors cursor-pointer" height="30" rx="2" width="10" x="50" y="70"></rect>
+<rect class="chart-bar fill-primary transition-colors cursor-pointer" height="80" rx="2" width="10" x="65" y="20"></rect>
+<rect class="chart-bar fill-primary transition-colors cursor-pointer" height="50" rx="2" width="10" x="80" y="50"></rect>
+</svg>
+</div>
+<div class="flex justify-between mt-xs font-caption text-caption text-on-surface-variant px-1">
+<span>Jan</span><span>Fev</span><span>Mar</span><span>Avr</span><span>Mai</span><span>Jun</span>
+</div>
+</div>
+</div>
+<!-- Center/Right Column: Heatmap & Top Species -->
+<div class="lg:col-span-2 flex flex-col gap-md">
+<!-- Heatmap Card -->
+<div class="bg-surface-container-lowest rounded-[24px] p-md ambient-shadow relative overflow-hidden flex-grow min-h-[400px]">
+<h2 class="font-card-title text-card-title text-on-surface mb-md relative z-10">Densité de Biodiversité (Carte)</h2>
+<!-- Map Background -->
+<div class="absolute inset-0 top-16 bg-surface-container-low" data-location="Ouagadougou 2iE Campus Map" style="">
+<img class="w-full h-full object-cover opacity-80" data-alt="A highly detailed, stylized top-down map of a modern university campus in Burkina Faso, featuring vibrant green areas, precise pathways, and contemporary institutional buildings. The aesthetic is clean, light-mode, and scientific with a soft ambient glow, fitting for an environmental monitoring dashboard." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpn8yX-gWaNTMlx52m9wLEQGAoZbHD3tpWmNpcxqgoca_iMUhZF1cDuRwbIh6dFU1gxSdF8RkeTyMT2bPouR8v-_Xn83xEgXMR-983TTSzeDbQ-Dw3LAP0NNKYf2CAeZyo6hg_qq2mX-nrhEVS9uAJ45hqxO6qkTqVsq3zNvzQbgLXOzqt2Jqn7Ie-7B1ojNgbdQZuOb3nNBwLLC3VGJ_9COA9y3KChhFWnlMr34QJH521rp6S4p0UIaqyxBMUBZmsxr2BBewVu3J2"/>
+<!-- Heatmap Overlay / Density Points -->
+<div class="absolute top-[30%] left-[40%] w-32 h-32 bg-primary/40 rounded-full blur-[20px] mix-blend-multiply"></div>
+<div class="absolute top-[50%] left-[70%] w-24 h-24 bg-tertiary-container/50 rounded-full blur-[15px] mix-blend-multiply"></div>
+<div class="absolute top-[20%] left-[20%] w-40 h-40 bg-secondary-container/40 rounded-full blur-[25px] mix-blend-multiply"></div>
+<!-- Specific Data Points -->
+<div class="absolute top-[35%] left-[45%] w-4 h-4 bg-primary border-2 border-white rounded-full shadow-md"></div>
+<div class="absolute top-[55%] left-[75%] w-4 h-4 bg-tertiary border-2 border-white rounded-full shadow-md"></div>
+<div class="absolute top-[25%] left-[25%] w-4 h-4 bg-secondary-container border-2 border-white rounded-full shadow-md"></div>
+</div>
+<!-- Map Controls Glassmorphism overlay -->
+<div class="absolute bottom-md right-md glass-panel p-xs rounded-xl flex flex-col gap-xs z-10">
+<button class="w-8 h-8 flex items-center justify-center bg-surface-container-lowest rounded-lg text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined">add</span></button>
+<button class="w-8 h-8 flex items-center justify-center bg-surface-container-lowest rounded-lg text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined">remove</span></button>
+</div>
+</div>
+<!-- Top 5 Species List -->
+<div class="bg-surface-container-lowest rounded-[24px] p-md ambient-shadow">
+<h2 class="font-card-title text-card-title text-on-surface mb-md">Top 5 Espèces Observées</h2>
+<div class="flex flex-col gap-[12px]">
+<!-- List Item 1 -->
+<div class="flex items-center gap-md p-xs hover:bg-surface-container-low rounded-xl transition-colors">
+<div class="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A vivid, macro photography shot of an African Baobab tree leaf. The image is bright, highly detailed, and set against a soft, pure white background, emphasizing natural beauty and scientific clarity in a modern UI context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfs1kbLHBPIVe6Ey2Jh9ZCQDstD5Jy3BrVe34qXirmZ8U0a3Dx_n8UTXfHwVBs8amjauYzZWnfF4N5-y05EDlNGXw6nHtzlOqOPK5iSX6vpUNeUa06VkfPJsrDho5v7M-LB8MhH-8rS726YQSzq79-mK8n7LjVEtscPkgknQpzNeWJGE2E-I_ntsppZOQWHGkb_6MzJk-IQ6K4acTNdXOXcoXrPS77v6hnNpGUYWE3wxZwxKNIOqXdRH0pyj57Nr5MvL_7Iu9a9NlU"/>
+</div>
+<div class="flex-grow">
+<p class="font-body text-body font-medium text-on-surface">Adansonia digitata</p>
+<p class="font-caption text-caption text-on-surface-variant italic">Baobab africain</p>
+<div class="w-full h-1.5 bg-surface-variant rounded-full mt-1 overflow-hidden">
+<div class="h-full bg-tertiary" style="width: 85%;"></div>
+</div>
+</div>
+<div class="font-card-title text-card-title text-tertiary font-bold pl-md">142</div>
+</div>
+<!-- List Item 2 -->
+<div class="flex items-center gap-md p-xs hover:bg-surface-container-low rounded-xl transition-colors">
+<div class="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A crisp, high-resolution close-up of an Agama lizard resting on a sunlit rock. The color palette is vibrant with natural earthy tones, captured in a bright, modern light-mode style suitable for a high-end environmental dashboard." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKWkQuYLqw6J2kH9oCfn_1ugvIxYpit7pZObkQ3-Xc5Gidkc-D0k45YRp1WjGmjAadYV8fuJJl1QRyQKclKqXs5LL1ZwJLTEm98CDtunCpKmNsU4sHOINTauC4u543VUj1riRTalQHdQMGkI5_HwGhpGxXYFRl_CYbvnsY7pp4l9IRK-pzHBr7OG7kQmd5JAYSEO6wtHtpImjsBsDDKR0UDiCPXtDfQTYaQs5Gepf9hlVmMMpGVMqW4pGVDAoHlmVeJelt7Ka6h5sD"/>
+</div>
+<div class="flex-grow">
+<p class="font-body text-body font-medium text-on-surface">Agama agama</p>
+<p class="font-caption text-caption text-on-surface-variant italic">Margouillat commun</p>
+<div class="w-full h-1.5 bg-surface-variant rounded-full mt-1 overflow-hidden">
+<div class="h-full bg-tertiary" style="width: 70%;"></div>
+</div>
+</div>
+<div class="font-card-title text-card-title text-tertiary font-bold pl-md">98</div>
+</div>
+<!-- List Item 3 -->
+<div class="flex items-center gap-md p-xs hover:bg-surface-container-low rounded-xl transition-colors">
+<div class="w-12 h-12 rounded-lg overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="A stunning, bright close-up of a vibrant yellow weaver bird perched on an acacia branch. The background is a soft, out-of-focus green, evoking a serene, scientific aesthetic perfectly suited for a modern nature observation platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-Dr6dhHsXqFeKrMTwHufdIn26Wpp4hyHAWUPkBc07jHTLSoB6_-ARK7SXXRpafogKFg7kDlY8t9-1stKADZ8LM0MJtr0uspR3u-KO2V4AZ-saDtHE-w5AKrz2HvgSxZ9R-jGB2y-lw-aARWD1_IR-g6pnJZBa0qMJqZhW8nM0spCoimW5-sM9Gh3wuboh-p8KhIS66EabBo1f8MMsJckirUZG20ZjPdCkphhR5VW1eiTP4LgW5EhHZ9DYTLDN-sN53fdGp-0tfp9a"/>
+</div>
+<div class="flex-grow">
+<p class="font-body text-body font-medium text-on-surface">Ploceus cucullatus</p>
+<p class="font-caption text-caption text-on-surface-variant italic">Tisserin gendarme</p>
+<div class="w-full h-1.5 bg-surface-variant rounded-full mt-1 overflow-hidden">
+<div class="h-full bg-tertiary" style="width: 55%;"></div>
+</div>
+</div>
+<div class="font-card-title text-card-title text-tertiary font-bold pl-md">76</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-on-surface text-surface-bright pt-xl pb-sm px-lg mt-auto border-t-4 border-primary-container">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-md">
+<div class="font-section-title text-section-title font-bold text-on-primary">
+                2iE BioMap
+            </div>
+<div class="flex gap-md">
+<a class="font-body text-body text-surface-variant hover:text-primary-fixed-dim transition-colors focus:ring-2 focus:ring-secondary-fixed rounded-sm px-1" routerLink="/explorer">Explorer</a>
+<a class="font-body text-body text-surface-variant hover:text-primary-fixed-dim transition-colors focus:ring-2 focus:ring-secondary-fixed rounded-sm px-1" routerLink="/contribution">Contribuer</a>
+<a class="font-body text-body text-surface-variant hover:text-primary-fixed-dim transition-colors focus:ring-2 focus:ring-secondary-fixed rounded-sm px-1" href="#">À propos</a>
+<a class="font-body text-body text-surface-variant hover:text-primary-fixed-dim transition-colors focus:ring-2 focus:ring-secondary-fixed rounded-sm px-1" href="#">Contact</a>
+</div>
+</div>
+<div class="max-w-container-max mx-auto mt-lg text-center font-caption text-caption text-surface-variant">
+            © 2025 2iE BioMap — Ouagadougou, Burkina Faso
+        </div>
+</footer>

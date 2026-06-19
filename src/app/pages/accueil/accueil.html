@@ -1,0 +1,375 @@
+<!-- TopNavBar -->
+<nav
+  class="fixed top-0 left-0 w-full z-50 transition-all"
+  [class]="scrolled() ? 'bg-on-surface/90 backdrop-blur-md shadow-md' : 'bg-transparent'"
+>
+<div class="flex justify-between items-center px-lg py-md max-w-container-max mx-auto">
+<div class="font-hero-title-mobile text-hero-title-mobile font-bold text-on-primary">
+            2iE BioMap
+        </div>
+<div class="hidden md:flex items-center gap-md">
+<a class="font-body text-body text-on-primary border-b-2 border-primary-container pb-1 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/accueil">Accueil</a>
+<a class="font-body text-body text-on-primary/90 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/explorer">Explorer</a>
+<a class="font-body text-body text-on-primary/90 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/contribution">Contribuer</a>
+<a class="font-body text-body text-on-primary/90 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/stats">Statistiques</a>
+<a class="font-body text-body text-on-primary/90 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" href="#">À propos</a>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative h-[1024px] w-full overflow-hidden flex flex-col items-center justify-center pt-xl px-md">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A breathtaking, vibrant full-screen photograph of a majestic Flamboyant tree in full bloom on a bright sunny day. The vivid red and orange flowers pop against a clear blue sky, casting dappled light on the lush green grass below. The lighting is bright and modern, perfectly capturing the warm, immersive, and scientific character of the 2iE BioMap ecosystem platform. The aesthetic is corporate modern with a tactile twist." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5U93CbS7c-aEPMqHxj_6OVCTGmx0SuD5hB_ahRSwCIb5Z_-Kloup0cLj1aRvYj4q1LCGei_GgcWMDjJg5gZbUN7mUsWK1ZJzVt9yGpMdxTy59DvzCUphwjwlqg5GkQMlaGKCwxLCdC5e0PXJY8WNKn2L-AaGpklyhqkWoxF-BQmWgM2jrdE6imKM5Ivw-LnMH6HEkmxtXwYwSyPwC9wOiuIhrv5RIJdyqW6ultiZzCA1t41AMjyfYdLNNSG-BHcnRFkkXN7muHxvL"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface via-on-surface/40 to-transparent"></div>
+</div>
+<div class="relative z-10 text-center max-w-4xl mx-auto flex flex-col items-center gap-md">
+<div class="inline-flex items-center gap-xs bg-tertiary/20 backdrop-blur-md border border-tertiary-fixed text-tertiary-fixed-dim px-sm py-2 rounded-full font-card-title text-card-title">
+<span class="material-symbols-outlined text-[18px]">eco</span>
+<span>Biodiversité du Campus</span>
+</div>
+<h1 class="font-hero-title text-hero-title font-bold text-on-primary md:font-hero-title md:text-hero-title font-hero-title-mobile text-hero-title-mobile drop-shadow-md">
+                Le vivant de notre campus, capturé par notre communauté
+            </h1>
+<p class="font-card-title text-card-title text-surface-container-highest max-w-2xl drop-shadow-sm">
+                Explorez 247 espèces documentées par 89 membres de 2iE
+            </p>
+<div class="flex flex-col sm:flex-row gap-md mt-md">
+<button class="bg-primary-container hover:bg-primary-fixed text-on-primary hover:text-on-primary-fixed-variant hover:border-b-4 border-secondary-fixed transition-all px-lg py-sm rounded-[16px] font-card-title text-card-title font-bold shadow-lg hover:shadow-xl active:translate-y-1 active:shadow-md">
+                    Explorer la galerie
+                </button>
+<button class="flex items-center justify-center gap-xs bg-surface-container/20 hover:bg-surface-container/40 backdrop-blur-sm text-on-primary border border-on-primary/30 transition-all px-lg py-sm rounded-[16px] font-card-title text-card-title font-bold">
+<span class="material-symbols-outlined text-[20px]">photo_camera</span>
+                    + Ajouter une observation
+                </button>
+</div>
+</div>
+</section>
+<!-- Floating Filter Bar -->
+<div class="sticky top-xl z-40 w-full px-md pt-sm pb-md flex justify-center pointer-events-none">
+<div class="glass-panel rounded-full px-sm py-2 flex gap-sm pointer-events-auto shadow-md border border-surface-variant">
+<button class="bg-primary-container text-on-primary px-4 py-2 rounded-full text-caption font-caption font-bold transition-colors">Tout</button>
+<button class="bg-tertiary-container text-on-tertiary px-4 py-2 rounded-full text-caption font-caption hover:bg-tertiary-fixed hover:text-on-tertiary-fixed transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">forest</span> Arbres
+            </button>
+<button class="bg-secondary-container text-on-secondary-container px-4 py-2 rounded-full text-caption font-caption hover:bg-secondary-fixed hover:text-on-secondary-fixed transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">pets</span> Animaux
+            </button>
+</div>
+</div>
+<!-- Galerie Défilante -->
+<section class="py-xl overflow-hidden bg-background">
+<!-- Row 1 -->
+<div class="marquee mb-md group">
+<div class="marquee-content animate-scroll-left group-hover:[animation-play-state:paused]">
+<!-- Card 1 -->
+<div class="w-[240px] h-[300px] bg-surface-container-lowest rounded-[16px] ambient-shadow card-hover transition-all duration-300 flex flex-col overflow-hidden relative cursor-pointer border border-surface-container-low">
+<div class="h-[75%] w-full relative">
+<img class="w-full h-full object-cover" data-alt="A beautiful, high-definition close-up macro photograph of a vibrant yellow Weaver bird resting on a thin, delicate green branch. The background is a soft, completely blurred green bokeh, emphasizing the intricate details of the bird's feathers. The aesthetic is corporate modern with a tactile twist, capturing a warm, immersive, and scientific character of the biodiversity platform. The lighting is bright and natural." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8-f2HMv_BIxrxtW_j21d_wCn0HiMXRkfLJBMmeq89x_b341En11IwB4G3XzW1ENJq1UNTkdMH1QtBkYVMZFZfI4zFtoOMX8tI0Rt7Hd5lG_PLgnBH1490Rx6Qp-in-iqu8QSDun8C_GNsKXans3cj69iz-nUdVvLydAPZiIkADjySj97qD6mngsrTo00wPzh5hIfxWJz5GGYYBF9R6PK0ANp-oI-BdQfdLZX1O9v_lQ9Lulo7JEs3QAgbPiJtuhdgEQb7mzmf6MCo"/>
+</div>
+<div class="h-[25%] p-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body text-body italic text-on-surface">Ploceus cucullatus</span>
+</div>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-1 rounded-full text-[10px] font-bold">Animaux</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="w-[240px] h-[300px] bg-surface-container-lowest rounded-[16px] ambient-shadow card-hover transition-all duration-300 flex flex-col overflow-hidden relative cursor-pointer border border-surface-container-low">
+<div class="h-[75%] w-full relative">
+<img class="w-full h-full object-cover" data-alt="A beautiful, high-definition close-up photograph of a vibrant pink Bougainvillea flower in full bloom. The delicate, papery petals are brightly illuminated by soft sunlight. The background is a soft, completely blurred green bokeh, emphasizing the intricate details of the flower. The aesthetic is corporate modern with a tactile twist, capturing a warm, immersive, and scientific character of the biodiversity platform. The lighting is bright and natural." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSeYX1UdR28mT3pgl0gtYdZkctOmTFC0T-4HmdXu_ussEfaK02hrTLT8lHJeEArdiYNyZ3UpCEMZJLSXF_Zq732imFTuHyQ4oD2JOz_o9h98ZWxsiI3mqsuoWyK3b4F1Zn2-9YzjS0i5jjflmb-5d3pjnHWvOAlsINVHWnF3R5U5Xwe5sXPy-YgeaDSmfInJnGsWeefl5V8aGYCvR8CGKr0xYc-5_NiSWi4RC2M-_AFby5shOJ82qNe184HJcRgF1OpJxtcGFn8hgT"/>
+</div>
+<div class="h-[25%] p-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body text-body italic text-on-surface">Bougainvillea glabra</span>
+</div>
+<span class="bg-tertiary-container text-on-tertiary px-2 py-1 rounded-full text-[10px] font-bold">Plantes</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="w-[240px] h-[300px] bg-surface-container-lowest rounded-[16px] ambient-shadow card-hover transition-all duration-300 flex flex-col overflow-hidden relative cursor-pointer border border-surface-container-low">
+<div class="h-[75%] w-full relative">
+<img class="w-full h-full object-cover" data-alt="A beautiful, high-definition close-up macro photograph of a vivid green chameleon resting cautiously on a thick, textured brown branch. The background is a soft, completely blurred forest green bokeh, emphasizing the intricate details of the chameleon's scales. The aesthetic is corporate modern with a tactile twist, capturing a warm, immersive, and scientific character of the biodiversity platform. The lighting is bright and natural." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzQAcSeLyO6EOM8qxhthFC4gTPTcD4hF_DSdoNDzuyMbjM8ApDkLfylSi7HINvg4fo-_HSLMJUr6tRSK21w8p9WqIvJMUZ-TlJIgEph1acGrUk30fwqbBG4uo0lXN9pKum1xYiIe3g09sX07Q7fvmFx4HTq0K5k9NdZEGvHCz5RD77SA7GNebeOk0sb5yv9v85E3GTktH5GaQYmkGaKBEBH3gp1pjVQvvy1eoISs53964KJ0bNpnWfa9OysJ8Hxnvsvl6_2kb1Ej4P"/>
+</div>
+<div class="h-[25%] p-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body text-body italic text-on-surface">Chamaeleonidae</span>
+</div>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-1 rounded-full text-[10px] font-bold">Animaux</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="w-[240px] h-[300px] bg-surface-container-lowest rounded-[16px] ambient-shadow card-hover transition-all duration-300 flex flex-col overflow-hidden relative cursor-pointer border border-surface-container-low">
+<div class="h-[75%] w-full relative">
+<img class="w-full h-full object-cover" data-alt="A beautiful, high-definition photograph of a massive, ancient Baobab tree trunk against a clear blue sky. The rough, textured grey bark is highly detailed. The aesthetic is corporate modern with a tactile twist, capturing a warm, immersive, and scientific character of the biodiversity platform. The lighting is bright and natural, casting soft shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_NzrfsYynDNMWe9MCJPrlyab478fsQU3EEvpcnqvEawmLQVKNpRGjLNBXtf7LtDVhLX6yZH26vjwVz7EHzrS0KfHb6ELuUbR_kyASy0EUjGNRMEyFIQf3ev2IetjAHsphs63gIwV15Cxtb4o4gCUU5rwG36J_KFBUJB6JXC824rUKWpDnYz9a0G6yellnI_tsPnObDpRz0O8qF_wamDgYd13wUyCyhpF8VtVA9C7SutMXoWvNpJ0CnBwipctvlPah2HweQ27ibPhx"/>
+</div>
+<div class="h-[25%] p-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body text-body italic text-on-surface">Adansonia digitata</span>
+</div>
+<span class="bg-tertiary-container text-on-tertiary px-2 py-1 rounded-full text-[10px] font-bold">Arbres</span>
+</div>
+</div>
+<div aria-hidden="true" class="flex gap-md">
+<div class="w-[240px] h-[300px] bg-surface-container-lowest rounded-[16px] ambient-shadow card-hover transition-all duration-300 flex flex-col overflow-hidden relative cursor-pointer border border-surface-container-low">
+<div class="h-[75%] w-full relative">
+<img class="w-full h-full object-cover" data-alt="A beautiful, high-definition close-up macro photograph of a vibrant yellow Weaver bird resting on a thin, delicate green branch. The background is a soft, completely blurred green bokeh, emphasizing the intricate details of the bird's feathers. The aesthetic is corporate modern with a tactile twist, capturing a warm, immersive, and scientific character of the biodiversity platform. The lighting is bright and natural." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbvHMCybX6YqFqt1-7tZwAuqEbAZailfEW4_CinqQVZm54c4e8OQ5_lItXH6FCf_AerPDNCIsN9zbtV1M6zzYZKarq-qIJzG_kVJdE6uaT-yphum3mi5NR7Tx_umeG6cPIE5wRTfY439Dz6lkpqCWGRU8IENwsIpg7Q92iugos3RlhTFprzxZ0wFkTckLvYZbzS0b6cECUkKewHfPfx0IyZSh6IPiGSXE8RhNz9YLZcfDApxnftQ6NNZ3qzYetSst36wu1pM_kxTsa"/>
+</div>
+<div class="h-[25%] p-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body text-body italic text-on-surface">Ploceus cucullatus</span>
+</div>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-1 rounded-full text-[10px] font-bold">Animaux</span>
+</div>
+</div>
+<div class="w-[240px] h-[300px] bg-surface-container-lowest rounded-[16px] ambient-shadow card-hover transition-all duration-300 flex flex-col overflow-hidden relative cursor-pointer border border-surface-container-low">
+<div class="h-[75%] w-full relative">
+<img class="w-full h-full object-cover" data-alt="A beautiful, high-definition close-up photograph of a vibrant pink Bougainvillea flower in full bloom. The delicate, papery petals are brightly illuminated by soft sunlight. The background is a soft, completely blurred green bokeh, emphasizing the intricate details of the flower. The aesthetic is corporate modern with a tactile twist, capturing a warm, immersive, and scientific character of the biodiversity platform. The lighting is bright and natural." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoHbmNtJH295ssm_giHju-xk5rmedf0q7ozjBNnwyP9Nf31Q1Rr9ZwcxHM3mldy5nS_PaKVZJF-o-wSHPK8dJ3zlVr2dkvYUqk373xbhPAFwfJMviJ43EWKFDLv3d18O7zQErZqMFslKa9pNDdjp3G0p3-khEJqgl-Vv_DYVPhTQ2BBZOLskw23e8c-Bz6H66WzLkzUcC7e1oKXwk8FjRhXq-Uy8258tXzdE384OJipwuxuJHGeyixprj3nGHGHB3lwxBZZ-7lGdUX"/>
+</div>
+<div class="h-[25%] p-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body text-body italic text-on-surface">Bougainvillea glabra</span>
+</div>
+<span class="bg-tertiary-container text-on-tertiary px-2 py-1 rounded-full text-[10px] font-bold">Plantes</span>
+</div>
+</div>
+<div class="w-[240px] h-[300px] bg-surface-container-lowest rounded-[16px] ambient-shadow card-hover transition-all duration-300 flex flex-col overflow-hidden relative cursor-pointer border border-surface-container-low">
+<div class="h-[75%] w-full relative">
+<img class="w-full h-full object-cover" data-alt="A beautiful, high-definition close-up macro photograph of a vivid green chameleon resting cautiously on a thick, textured brown branch. The background is a soft, completely blurred forest green bokeh, emphasizing the intricate details of the chameleon's scales. The aesthetic is corporate modern with a tactile twist, capturing a warm, immersive, and scientific character of the biodiversity platform. The lighting is bright and natural." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZqKMMMB6zWP0cpf1Gcxyrqkb944scbCUdLOCr2gHS4WkeCjsX2eXKuh1207Gm12qALU8tJKwvAoBDFP-FLV5dCQiTL8ZbuSYuPceHaJv4wo2L0wA4TBLZc7xSsDc9_CWRGwyGesJKfXwFsk8U6YiM6EAwvrIoWkKmxUYsBSYAltk1zDPNXwYL2P_PdhveCP7lNyLH4OrhldXngdY6O14AxUuaqkjcb9SgHYMIa_aaI2cky_5a0LyYAcQmhKc-JpLWsympXs2wIhFn"/>
+</div>
+<div class="h-[25%] p-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body text-body italic text-on-surface">Chamaeleonidae</span>
+</div>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-1 rounded-full text-[10px] font-bold">Animaux</span>
+</div>
+</div>
+<div class="w-[240px] h-[300px] bg-surface-container-lowest rounded-[16px] ambient-shadow card-hover transition-all duration-300 flex flex-col overflow-hidden relative cursor-pointer border border-surface-container-low">
+<div class="h-[75%] w-full relative">
+<img class="w-full h-full object-cover" data-alt="A beautiful, high-definition photograph of a massive, ancient Baobab tree trunk against a clear blue sky. The rough, textured grey bark is highly detailed. The aesthetic is corporate modern with a tactile twist, capturing a warm, immersive, and scientific character of the biodiversity platform. The lighting is bright and natural, casting soft shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCA-_ue167mCm2O5YouLxAqvgBHH_HNLt9rHzXFL0H1EumoBLFBl6eOvJsI44877gfah5dO4KZOsUCY80RyKbDH1U3gqCU21akCVGLyKM2rnfpcRwzuY5WqWUlEpUknTdUr6aiRKvYGgz_rqQnTX1ahfbHt56o-7AOiTuICjf7XtUsl5LL3JX6VwsF7gbPGGkesh6cscFcBxb--khVYYNvqG96nPiekssBsZDMbykjx68vN-0Y7WZjhcLIt8pCBLOpLTDg0uv8Si-aO"/>
+</div>
+<div class="h-[25%] p-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body text-body italic text-on-surface">Adansonia digitata</span>
+</div>
+<span class="bg-tertiary-container text-on-tertiary px-2 py-1 rounded-full text-[10px] font-bold">Arbres</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="marquee group">
+<div class="marquee-content animate-scroll-right group-hover:[animation-play-state:paused]">
+<div class="w-[240px] h-[300px] bg-surface-container-lowest rounded-[16px] ambient-shadow card-hover transition-all duration-300 flex flex-col overflow-hidden relative cursor-pointer border border-surface-container-low">
+<div class="h-[75%] w-full relative">
+<img class="w-full h-full object-cover" data-alt="A striking high-definition macro photograph of a brilliantly colored Agama lizard basking on a grey concrete block. The lizard has a bright orange head and a dark blue body. The background is a soft, completely blurred bokeh. The aesthetic is corporate modern with a tactile twist, capturing a warm, immersive, and scientific character of the biodiversity platform. The lighting is bright and sunny." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjDm4BP5Ger-vjNxrL3rFbkhXpbm9HrbHgO1LuqYUVXkEK31PHTzbp1LgjCe4OpYbAYmlAqZKxkTUlPOvqifcC5_JI2mClWMTxpo5MOB_Mm9N6jaq0oKeNlCyLlP2Swr6PcytmTx4a6QwE2KKBBKvf8RCPyUlfZTZY6TFZhnKBo4DaGDaDbl0OOIEUWB4sJKscV_EwAzE-w_YmKxpIgcW44YxvfBXC2RfPuQ0XTUXmsfrd0i8y5kjtezWu1mYJNSaNFhPXpxR6t3pO"/>
+</div>
+<div class="h-[25%] p-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body text-body italic text-on-surface">Agama agama</span>
+</div>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-1 rounded-full text-[10px] font-bold">Animaux</span>
+</div>
+</div>
+<div class="w-[240px] h-[300px] bg-surface-container-lowest rounded-[16px] ambient-shadow card-hover transition-all duration-300 flex flex-col overflow-hidden relative cursor-pointer border border-surface-container-low">
+<div class="h-[75%] w-full relative">
+<img class="w-full h-full object-cover" data-alt="A stunning high-definition close-up photograph of vibrant yellow Cassia flowers hanging gracefully in clusters. The delicate petals are perfectly lit by natural sunlight. The background is a soft, completely blurred green bokeh. The aesthetic is corporate modern with a tactile twist, capturing a warm, immersive, and scientific character of the biodiversity platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvVBp8jvg8IZs6p5ZYDyHi5k5tCwpdzEwKZKwILOJy9B_wbjjOfdOS7NIYXrggJC0ic_sXIKoB949RNYFa3c_ud9UpEWJwNvCb7jUK6DUR9A2Ge5Y_RmLaAge50SUBtp078iVHd0tnuQyEWR0IaMYdIhnBrZ8GCbICehxEIx9ELUNarKj9O6vljrFHScZcyWCScCIIHTJ6HasMDne4aSJTet6NvoXOxR42B-fPG-Rz_YejCHsNYQft01opvqfSNoRfT_og6j1GGztv"/>
+</div>
+<div class="h-[25%] p-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body text-body italic text-on-surface">Cassia fistula</span>
+</div>
+<span class="bg-tertiary-container text-on-tertiary px-2 py-1 rounded-full text-[10px] font-bold">Plantes</span>
+</div>
+</div>
+<div class="w-[240px] h-[300px] bg-surface-container-lowest rounded-[16px] ambient-shadow card-hover transition-all duration-300 flex flex-col overflow-hidden relative cursor-pointer border border-surface-container-low">
+<div class="h-[75%] w-full relative">
+<img class="w-full h-full object-cover" data-alt="A beautiful, high-definition photograph of a delicate butterfly with bright white and orange wings resting gently on a green leaf. The background is a soft, completely blurred bokeh, emphasizing the intricate patterns on the butterfly's wings. The aesthetic is corporate modern with a tactile twist, capturing a warm, immersive, and scientific character of the biodiversity platform. The lighting is bright and natural." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVMgz2rx6j3DtoPaeHv_brIq3MTLetuQsMRe0CgiXJiceuA9AWr3LaMJMLw_TLXMmaAsX1BQWQ9JVHI1i-mky-7Fm3WADBgjAF14gKvNlzJOw2fidjRZVQjBlvGb0Rg4smcqq9-2B8szBjvm5Wo9Cyo1uFjD_UEUZb00COY3OJxf8YgO9xEMbCcUVtfZKgOreNdoUinFpXQS9M1AEuuxhYfiMUUWVHilgWbsfvTGjEQh8paYnQcorj2_VhH1nWk4-0UyrlSoQMqTSW"/>
+</div>
+<div class="h-[25%] p-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body text-body italic text-on-surface">Lepidoptera</span>
+</div>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-1 rounded-full text-[10px] font-bold">Animaux</span>
+</div>
+</div>
+<div class="w-[240px] h-[300px] bg-surface-container-lowest rounded-[16px] ambient-shadow card-hover transition-all duration-300 flex flex-col overflow-hidden relative cursor-pointer border border-surface-container-low">
+<div class="h-[75%] w-full relative">
+<img class="w-full h-full object-cover" data-alt="A beautiful, high-definition photograph of a lush, broad-leafed tropical plant growing near a campus building. The leaves are a vibrant, deep green with distinct veining. The aesthetic is corporate modern with a tactile twist, capturing a warm, immersive, and scientific character of the biodiversity platform. The lighting is bright and natural, casting soft shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAKlgRS_dZ5lCDpTc-iXROqwxYX4RPr9rmwcxekZNd7mjPSvey6R5MfxAM2_CBQj6Ub2ylzJLt8OkpzOEb_LbfFu2cvDl-LHRfx_pYgNcXtO54VaWR3tnXKBax0y7q1ujJZhHxHh_m6ofUMwx5IXiOgw9Kt9sqTFlScQSbyir03BuqCGhbTSrz8q_obYdrsK4sXwo33I5mcvuQxuiQNp6SdBQOKDw3jQWSTxtLh3Qef320n79pV5ebBYk1rB03Qq6apCdBPUcjdft5"/>
+</div>
+<div class="h-[25%] p-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body text-body italic text-on-surface">Musa acuminata</span>
+</div>
+<span class="bg-tertiary-container text-on-tertiary px-2 py-1 rounded-full text-[10px] font-bold">Plantes</span>
+</div>
+</div>
+<div aria-hidden="true" class="flex gap-md">
+<div class="w-[240px] h-[300px] bg-surface-container-lowest rounded-[16px] ambient-shadow card-hover transition-all duration-300 flex flex-col overflow-hidden relative cursor-pointer border border-surface-container-low">
+<div class="h-[75%] w-full relative">
+<img class="w-full h-full object-cover" data-alt="A striking high-definition macro photograph of a brilliantly colored Agama lizard basking on a grey concrete block. The lizard has a bright orange head and a dark blue body. The background is a soft, completely blurred bokeh. The aesthetic is corporate modern with a tactile twist, capturing a warm, immersive, and scientific character of the biodiversity platform. The lighting is bright and sunny." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPe5DNiFLawv9zTJR0VIYd0YE1FunW-LuqqCp_InArFWRjqH78MNcEQopYNrXSlxnoPJvce0kpcKBVLGCf-DB7RLtHYreTlYGBtbhiFlLDe_onQAcB0tI9cIgpiFjMSQlLO8b0K2dmKGGxC9M3evK3ObS6PqgNjNSDpe2SCfTAPJVZ3IfqMD2JcXYL5QzdSPewdGX2mqH6ptpOBgBcF9tku65DiqAqcLCONCiQd6YUHXDgzxhqrJz3EeKEMoQ-g9YZkdxF1DtWCsq9"/>
+</div>
+<div class="h-[25%] p-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body text-body italic text-on-surface">Agama agama</span>
+</div>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-1 rounded-full text-[10px] font-bold">Animaux</span>
+</div>
+</div>
+<div class="w-[240px] h-[300px] bg-surface-container-lowest rounded-[16px] ambient-shadow card-hover transition-all duration-300 flex flex-col overflow-hidden relative cursor-pointer border border-surface-container-low">
+<div class="h-[75%] w-full relative">
+<img class="w-full h-full object-cover" data-alt="A stunning high-definition close-up photograph of vibrant yellow Cassia flowers hanging gracefully in clusters. The delicate petals are perfectly lit by natural sunlight. The background is a soft, completely blurred green bokeh. The aesthetic is corporate modern with a tactile twist, capturing a warm, immersive, and scientific character of the biodiversity platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiQFPv7EyTv_CxF3xckLlT14fg_40YuyF1x3Lu2abwenoGLpClXpfYBKRvKVavNSWkWOdRGeefTclNHNBOKPnPANKUKK2VVr9x4k3U-8asxV3nGiq9Uz2BKWj1eb4mn5mt_eHCp58vpUzLzQortznxCt4g9JK6usp-sknwPzwtJkF-0QG_yztIk-Y_wIQf1YZj9lz9w_XrOSHB_d_Z4DYeluJ5XDpOrl0M-KQRuRZIVsy6xFrAB-OGhN-Wm7SNfuGhojm-5sWNIlIC"/>
+</div>
+<div class="h-[25%] p-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body text-body italic text-on-surface">Cassia fistula</span>
+</div>
+<span class="bg-tertiary-container text-on-tertiary px-2 py-1 rounded-full text-[10px] font-bold">Plantes</span>
+</div>
+</div>
+<div class="w-[240px] h-[300px] bg-surface-container-lowest rounded-[16px] ambient-shadow card-hover transition-all duration-300 flex flex-col overflow-hidden relative cursor-pointer border border-surface-container-low">
+<div class="h-[75%] w-full relative">
+<img class="w-full h-full object-cover" data-alt="A beautiful, high-definition photograph of a delicate butterfly with bright white and orange wings resting gently on a green leaf. The background is a soft, completely blurred bokeh, emphasizing the intricate patterns on the butterfly's wings. The aesthetic is corporate modern with a tactile twist, capturing a warm, immersive, and scientific character of the biodiversity platform. The lighting is bright and natural." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVIwunQ1Ks2FybbUFWcavuxEdybT4j-aJHxfgH_IAlOQgGbr3xStSafIFotDhtj_na-1Uu_QME2cHK-0CxRL0rZFVrs1AyYPWb1o_HHDCkyX5SIRMkQ_7rQ3UYsl8oDmrWL7E1YxHHMuo_MMDd-5dhR6nHQPBFP3DDaEZGGUhPzLihysb07Y6JTTDcW4RPbss5D6CGKHzao5IKoPol7gLZBTsRZUfgTn0_-g903wLaVlIl-Cq72XG0MSO5POUt3aGEOW0T96_QvfxF"/>
+</div>
+<div class="h-[25%] p-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body text-body italic text-on-surface">Lepidoptera</span>
+</div>
+<span class="bg-secondary-container text-on-secondary-container px-2 py-1 rounded-full text-[10px] font-bold">Animaux</span>
+</div>
+</div>
+<div class="w-[240px] h-[300px] bg-surface-container-lowest rounded-[16px] ambient-shadow card-hover transition-all duration-300 flex flex-col overflow-hidden relative cursor-pointer border border-surface-container-low">
+<div class="h-[75%] w-full relative">
+<img class="w-full h-full object-cover" data-alt="A beautiful, high-definition photograph of a lush, broad-leafed tropical plant growing near a campus building. The leaves are a vibrant, deep green with distinct veining. The aesthetic is corporate modern with a tactile twist, capturing a warm, immersive, and scientific character of the biodiversity platform. The lighting is bright and natural, casting soft shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWkzkUKlyjKSHQMPYxfKmc8GS5p7eWOcSa48T0fwEjV8Yki752NHPOJ5-Nt0gpWK3-p6_kimVOFHb-jr9fCwMaCzR3BPP-EgqQ0o4v_vIUJDBgKV7x5p0e-1S41GmRvyIcmv34MtIUiiyLcbbRs7gtgt3cqNXZQJoLtNuTp1FGK9sfQdvk-qV3SOhsISJmfx1zgtihekE8AOcxGkyWl333Dt7hnovTZMnjBDnpQ3CKNFhiTuHIlLTAXdXIocY5mDiSH3lv4Tw3_1OF"/>
+</div>
+<div class="h-[25%] p-sm flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body text-body italic text-on-surface">Musa acuminata</span>
+</div>
+<span class="bg-tertiary-container text-on-tertiary px-2 py-1 rounded-full text-[10px] font-bold">Plantes</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Section -->
+<section class="w-full bg-primary-container text-on-primary py-lg relative overflow-hidden">
+<!-- Abstract shape background pattern -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 20% 150%, #ffffff 0%, transparent 50%), radial-gradient(circle at 80% -50%, #ffffff 0%, transparent 50%);"></div>
+<div class="max-w-container-max mx-auto px-lg relative z-10 grid grid-cols-2 md:grid-cols-4 gap-md text-center">
+<div class="flex flex-col items-center justify-center p-sm glass-panel bg-on-primary/10 rounded-[16px] border border-on-primary/20 shadow-md">
+<span class="font-hero-title text-hero-title font-bold">247</span>
+<span class="font-card-title text-card-title">Espèces</span>
+</div>
+<div class="flex flex-col items-center justify-center p-sm glass-panel bg-on-primary/10 rounded-[16px] border border-on-primary/20 shadow-md">
+<span class="font-hero-title text-hero-title font-bold">1043</span>
+<span class="font-card-title text-card-title">Photos</span>
+</div>
+<div class="flex flex-col items-center justify-center p-sm glass-panel bg-on-primary/10 rounded-[16px] border border-on-primary/20 shadow-md">
+<span class="font-hero-title text-hero-title font-bold">89</span>
+<span class="font-card-title text-card-title">Contributeurs</span>
+</div>
+<div class="flex flex-col items-center justify-center p-sm glass-panel bg-on-primary/10 rounded-[16px] border border-on-primary/20 shadow-md">
+<span class="font-hero-title text-hero-title font-bold">38</span>
+<span class="font-card-title text-card-title">Arbres +50 ans</span>
+</div>
+</div>
+</section>
+<!-- Recent Observations -->
+<section class="py-xl max-w-container-max mx-auto px-lg">
+<h2 class="font-section-title text-section-title font-bold text-on-background mb-lg">Observations Récentes</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<!-- Large Card 1 -->
+<div class="w-full h-[460px] bg-surface-container-lowest rounded-[24px] ambient-shadow card-hover transition-all duration-300 flex flex-col overflow-hidden relative cursor-pointer border border-surface-container-low group">
+<div class="h-[70%] w-full relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A stunning, high-resolution photograph of a brightly colored Kingfisher bird perched gracefully on a branch near a calm body of water. The bird's brilliant blue and orange plumage stands out sharply against the soft, blurred background of green reeds and water. The aesthetic is corporate modern with a tactile twist, capturing a warm, immersive, and scientific character. The lighting is pristine and natural." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtUdSabHtx7792Y3Nas54zUTUrB2wkJu9e-IV-d8DGDvXQV1DUUD7MAm_nQNyR2s01nU0Ph8kXoG6wkjKIJr0BjR3oEUUR4V2m-a_4dx8OHCbyrJfzSnGdbkfLgzqXphuMwARLl4i91eW-bhMSjIQ3TfTgQUxYTwtcvWoTV0xX7wxrTYcOv33qYqaNtvtkU-J20MUELuAKlnd8qCPzIGO893NVYoIYPYSTHm7GLgnOoDRDviS8LtA9Wkp8GtkVvdxXaviH5f6-CkY7"/>
+<div class="absolute top-sm right-sm bg-secondary-fixed text-on-secondary-fixed px-3 py-1 rounded-full text-caption font-caption font-bold shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">star</span> Nouvelle Découverte
+                    </div>
+</div>
+<div class="h-[30%] p-md flex flex-col justify-between bg-surface-container-lowest relative z-10">
+<div>
+<h3 class="font-card-title text-card-title font-bold text-on-surface mb-1">Martin-pêcheur pie</h3>
+<p class="font-body text-body italic text-on-surface-variant">Ceryle rudis</p>
+</div>
+<div class="flex items-center justify-between mt-auto pt-sm border-t border-surface-variant">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">person</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Observé par A. Koné</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Aujourd'hui</span>
+</div>
+</div>
+</div>
+<!-- Large Card 2 -->
+<div class="w-full h-[460px] bg-surface-container-lowest rounded-[24px] ambient-shadow card-hover transition-all duration-300 flex flex-col overflow-hidden relative cursor-pointer border border-surface-container-low group">
+<div class="h-[70%] w-full relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A breathtaking, high-resolution close-up photograph of a vibrant red Hibiscus flower in full bloom, with delicate dew drops resting on its petals. The background is a soft, deep green blurred garden setting, emphasizing the texture and vivid color of the flower. The aesthetic is corporate modern with a tactile twist, capturing a warm, immersive, and scientific character. The lighting is bright and fresh." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIlwyZBvk5Fq3-vMMTXNtwqg2JcXRcGrtue3i1SjJi5WvnPayc_u0Ko69wPRo1VODXU--wy9WEUNhUXHzskPQUIxWql7Rvk-ZJTJXhYSuP0RW_3g2UY09vNkkKCwfp-3dya4oSRKzuRW3qEj8pwkFZUCWby4I5EvXmQBtcxo-FbVeBVA1A5de7pUeGSPl0LiRBqVg9YnlZQT8ZqPU2t7pkOloZ1NJJH-Ki-G6hezxv9URgyMaSAnikvrko_CDfzxZzs5dQZPWeSLAx"/>
+</div>
+<div class="h-[30%] p-md flex flex-col justify-between bg-surface-container-lowest relative z-10">
+<div>
+<h3 class="font-card-title text-card-title font-bold text-on-surface mb-1">Hibiscus rose de Chine</h3>
+<p class="font-body text-body italic text-on-surface-variant">Hibiscus rosa-sinensis</p>
+</div>
+<div class="flex items-center justify-between mt-auto pt-sm border-t border-surface-variant">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">person</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Observé par M. Tapsoba</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Hier</span>
+</div>
+</div>
+</div>
+<!-- Large Card 3 -->
+<div class="w-full h-[460px] bg-surface-container-lowest rounded-[24px] ambient-shadow card-hover transition-all duration-300 flex flex-col overflow-hidden relative cursor-pointer border border-surface-container-low group">
+<div class="h-[70%] w-full relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A striking high-resolution photograph of a beautifully patterned tortoise walking slowly across a patch of dry grass and scattered pebbles. The tortoise shell exhibits intricate geometric designs in shades of brown and yellow. The background is slightly blurred campus greenery. The aesthetic is corporate modern with a tactile twist, capturing a warm, immersive, and scientific character. The lighting is clear and sunny." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFFrJH70lM-AgboXbsE0AAcl3iw1WDbYl-QPi0hNkGGEZeGbsefeMZYpKMzNz9vH0__-OlrVWZOhU9H-ohYn7ERmLVWVGIWL-L1gkQkLAcOnP1i8L01chu45nk71S33gjct6tmfvrI5fCDjsV6zz2NIgX_HXw4kxXfkrEpt41snq6CrPBEqz7P_vfXqoQtGT6WI9s-_f0Yo6Nhtm_9y8iuh6LqtQYO0q7EwF6_OGeKVjzpZDU_-8OGLuE0e09djEGoY6Itz2Sa4Z8L"/>
+<div class="absolute top-sm right-sm bg-secondary-fixed-dim text-on-secondary-fixed px-3 py-1 rounded-full text-caption font-caption font-bold shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">local_fire_department</span> Forte Activité
+                    </div>
+</div>
+<div class="h-[30%] p-md flex flex-col justify-between bg-surface-container-lowest relative z-10">
+<div>
+<h3 class="font-card-title text-card-title font-bold text-on-surface mb-1">Tortue sillonnée</h3>
+<p class="font-body text-body italic text-on-surface-variant">Centrochelys sulcata</p>
+</div>
+<div class="flex items-center justify-between mt-auto pt-sm border-t border-surface-variant">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px]">person</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Observé par S. Diallo</span>
+</div>
+<span class="font-caption text-caption text-on-surface-variant">Il y a 2 jours</span>
+</div>
+</div>
+</div>
+</div>
+<div class="flex justify-center mt-xl">
+<button class="bg-surface-container text-on-surface hover:bg-surface-variant hover:text-on-surface border border-outline-variant transition-all px-lg py-sm rounded-full font-card-title text-card-title shadow-sm hover:shadow-md flex items-center gap-2">
+                Voir toutes les observations <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full bg-on-surface text-surface-bright pt-xl pb-sm px-lg full-width bottom-0 border-t-4 border-primary-container flat">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-md">
+<div class="font-section-title text-section-title font-bold text-on-primary">
+                2iE BioMap
+            </div>
+<div class="flex gap-md font-body text-body">
+<a class="text-surface-variant hover:text-primary-fixed-dim transition-colors focus:ring-2 focus:ring-secondary-fixed" routerLink="/explorer">Explorer</a>
+<a class="text-surface-variant hover:text-primary-fixed-dim transition-colors focus:ring-2 focus:ring-secondary-fixed" routerLink="/contribution">Contribuer</a>
+<a class="text-surface-variant hover:text-primary-fixed-dim transition-colors focus:ring-2 focus:ring-secondary-fixed" href="#">À propos</a>
+<a class="text-surface-variant hover:text-primary-fixed-dim transition-colors focus:ring-2 focus:ring-secondary-fixed" href="#">Contact</a>
+</div>
+</div>
+<div class="max-w-container-max mx-auto mt-lg pt-sm border-t border-surface-variant/30 text-center text-surface-variant font-caption text-caption">
+            © 2025 2iE BioMap — Ouagadougou, Burkina Faso
+        </div>
+</footer>

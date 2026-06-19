@@ -1,0 +1,160 @@
+<!-- Background Content (Simulating the underlying page) -->
+<div class="h-screen w-full absolute inset-0 z-0 flex flex-col blur-[2px] opacity-80 pointer-events-none">
+<!-- TopNavBar Structure injected from JSON -->
+<header
+  class="fixed top-0 left-0 w-full z-10 transition-all"
+  [class]="scrolled() ? 'bg-on-surface/90 backdrop-blur-md shadow-md' : 'bg-transparent'"
+>
+<div class="flex justify-between items-center px-lg py-md max-w-container-max mx-auto">
+<div class="font-hero-title-mobile text-hero-title-mobile font-bold text-on-primary">2iE BioMap</div>
+<nav class="hidden md:flex items-center gap-md">
+<a class="font-body text-body text-on-primary/90 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/accueil">Accueil</a>
+<a class="font-body text-body text-on-primary border-b-2 border-primary-container pb-1" routerLink="/explorer">Explorer</a>
+<a class="font-body text-body text-on-primary/90 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/contribution">Contribuer</a>
+<a class="font-body text-body text-on-primary/90 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" routerLink="/stats">Statistiques</a>
+<a class="font-body text-body text-on-primary/90 hover:text-primary-container hover:border-b-2 hover:border-primary-container transition-all" href="#">À propos</a>
+</nav>
+</div>
+</header>
+<!-- Dummy Main Content -->
+<main class="flex-grow pt-24 pb-lg px-lg max-w-container-max mx-auto w-full">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<div class="bg-surface-container h-64 rounded-xl"></div>
+<div class="bg-surface-container h-64 rounded-xl"></div>
+<div class="bg-surface-container h-64 rounded-xl"></div>
+</div>
+</main>
+</div>
+<!-- MODAL OVERLAY (The core focus of this task) -->
+<!-- Backdrop: 8px blur, semi-transparent dark overlay -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-on-surface/60 backdrop-blur-[8px] p-sm sm:p-md">
+<!-- Modal Container: 900px width, 24px radius (style guide), white background -->
+<div class="w-full max-w-[900px] bg-surface-container-lowest rounded-[24px] shadow-[0_4px_20px_rgba(0,0,0,0.15)] flex flex-col md:flex-row relative overflow-hidden max-h-[972px]">
+<!-- Close Button -->
+<button class="absolute top-sm right-sm z-20 bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface hover:bg-surface-variant p-xs rounded-full transition-colors group flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+<!-- Left Column (55%): Hero Photo & Gallery -->
+<div class="w-full md:w-[55%] flex flex-col bg-surface-container-low border-r border-outline-variant/30">
+<!-- Large hero photo -->
+<div class="relative w-full h-[250px] md:h-[380px] bg-surface-container">
+<div class="w-full h-full bg-cover bg-center" data-alt="A striking, high-resolution photograph of a majestic mature Mangifera indica (mango tree) on a sunny, modern university campus. The tree boasts lush, vibrant green foliage and a deeply textured, sturdy trunk, illuminated by bright natural daylight. The composition uses a shallow depth of field, rendering the warm-toned campus buildings in the background softly out of focus. The overall aesthetic is scientific yet inviting, featuring a bright light-mode feel." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC7QggKMahYdgb8gODd3Dcq-ZSmmV7PP0_pxh74TbQFAflurryD98p5pHFtiJlq_4Tc3NtprFaWN81HPjB-Cb0kAFot8Iqh_Mxpyv76yo1OPUoEtMqW7bIPqUMxurbl8uD56--v7_NKL5EtV5GfZz-Xp6ZYtMWHzLWtNr_LzMj15C8Yc2IBoivbh1tOIlWxHaKeWKcZ0YTSNSkbcszJolp28Pmrc9QmJHG5guiNeEh4eCySWECZkXQ8WEd7tlrNJVTZWveT401mJY06')"></div>
+</div>
+<!-- Thumbnail gallery of 5-6 miniatures -->
+<div class="p-sm flex gap-xs overflow-x-auto bg-surface-container-lowest">
+<div class="min-w-[60px] h-[60px] rounded-lg border-2 border-primary overflow-hidden opacity-100 cursor-pointer">
+<div class="w-full h-full bg-cover bg-center" data-alt="Close-up macro photography of lush green mango tree leaves, crisp details, natural sunlight filtering through, bright scientific aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC4P-4vfY4oj4uHQEKliAwxFPgZW5cuWzsa-dVP06ymT6vJylYSzSGGHP7Ox9qe3WLGZGTIsXNPqKI5YrNG-yCalEgiUh2PwDugOpmCP79hl1TYUCVGxuM2DHbtqemLTJ8J4zL3cirnsIAF1VLP_ddemH6D1-HsLGZH9WoI9SYv0egUrpJ-8NsoaMRsabBn0H1QrznL7xPi64QWx3BufukJL1wb40qvMtchh0MnzSTNddcHIUpT77l3LLu_caoRMhpu1ZfK7qYHPyQ7')"></div>
+</div>
+<div class="min-w-[60px] h-[60px] rounded-lg border border-outline-variant overflow-hidden opacity-70 hover:opacity-100 cursor-pointer transition-opacity">
+<div class="w-full h-full bg-cover bg-center" data-alt="Detailed shot of the rough, textured bark of a mature mango tree trunk, warm sunlight, natural tones." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuASlz7d2N6V9DGF-rNqOsztGBFcLKAhwqwQrz-ngVDWwJ39kMhihG6SeSOEhUtQGRiBQPO7dZ15bUMD0wtudJWvsjpXgUHdLIGDBZiuttCidefUPoFoO2--rjnUbGvLYswmcxislv6c4w17vYnJU8O5Zv76wx4m0jfefocztQ1joxzXHViK0XxXvve1lAUwVtS2xW4BxFU0kFRWutGAkpa2CUWsIWbRvaf02WC_kBzgu9moKlsJxIKSGXI5qS1zB6Ml7pHZIfnzJxCm')"></div>
+</div>
+<div class="min-w-[60px] h-[60px] rounded-lg border border-outline-variant overflow-hidden opacity-70 hover:opacity-100 cursor-pointer transition-opacity">
+<div class="w-full h-full bg-cover bg-center" data-alt="A cluster of unripe green mango fruits hanging from a branch, surrounded by leaves, bright daylight." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDaV3lcdkEZrtopVW6LBzkboDptmdzzw_auzleqolt2hy1VehGDn9gokeSwIL2Nm8sddSfoSCD84GXLkLlYTWoczcs-OYoVSfcxiH5KbEcnLKPJkwlZwz6-EwbtcC7kcl4LF95vgadHUGx7zFYhb-QQqo293ZrhGCWNe-FJHoV5qPFfbi2OCguNjtYAVBEJ7LrCx3tBsuKVVj6nahZMEn8Nup6TTtXvi07JMAvNs_d23qG6Tf5Ry3r-3JALkCkGlj5uuWUCoaN4e2aO')"></div>
+</div>
+<div class="min-w-[60px] h-[60px] rounded-lg border border-outline-variant overflow-hidden opacity-70 hover:opacity-100 cursor-pointer transition-opacity">
+<div class="w-full h-full bg-cover bg-center" data-alt="Wide shot showing the full canopy of a mango tree against a clear blue sky, vibrant colors." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCpmYn9ehaYfwHeKq-C9ZAJOLCtDYsYsfOFfoabjTUh8ShWnUW9GHesXXMs-NuguoVwJNtrvbPumwq9bWeRDxveAIJFPrQio_-7yg5kwhxaaKKTAq9oDnRik-hq1TXLxiilRiloVCo-92Evd_CQloP2c0VtLkN4pijS5cD-3QLrejaHIHYCZXKX0AsiaPQztnaLn4K1OFag21NaTrRrtdTQZuXGP9tNg3AaMpGXwjmjIcDHXsDLO57DQvrdTOr0U9CLwxyado4b7Cye')"></div>
+</div>
+<div class="min-w-[60px] h-[60px] rounded-lg border border-outline-variant overflow-hidden opacity-70 hover:opacity-100 cursor-pointer transition-opacity">
+<div class="w-full h-full bg-cover bg-center" data-alt="Sunlight piercing through the dense canopy of a mango tree, creating an intricate pattern of light and shadow on the leaves below." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCXmYYC5BOFDaRVd7bnbtt_fjvg7vLFa36rP8sMk9DnCD_duVqB9p3QxIdDWe5t5DCV276Gs-RI9xJkTGkQyaWP8vO76JsgMWRhLmeDU9zMwQfEjwDzOqg8yUnsoJFYtse-LMsWYwJhmbNMFDIhlAhObRW-IVeQ_bYenXBskqlcz3IS2NYNR6YglH9rgxvmZZAr-iYRKz3GA2g_z2NeM767pY1iv0DopWu6JqJXFekrfx_DUpfMizo2-v55jrB9CVd03mSrCmb90WoQ')"></div>
+</div>
+</div>
+</div>
+<!-- Right Column (45%): Content & Details -->
+<div class="w-full md:w-[45%] p-md md:p-lg flex flex-col gap-md overflow-y-auto bg-surface-container-lowest">
+<!-- Header Info -->
+<div class="flex flex-col gap-xs mt-xs md:mt-0">
+<!-- Top category pill (Green) -->
+<span class="bg-tertiary-container text-on-tertiary-container font-caption text-caption px-3 py-1 rounded-full w-max tracking-wide uppercase">
+                        Plante
+                    </span>
+<div class="flex flex-col">
+<!-- Title: "Manguier" (Red, 28px -> mapped to section-title) -->
+<h1 class="font-section-title text-section-title text-primary tracking-tight">Manguier</h1>
+<!-- Scientific Name: "Mangifera indica" (Medium gray, italic, 16px -> mapped to body) -->
+<h2 class="font-body text-body text-outline italic mt-1">Mangifera indica</h2>
+</div>
+<!-- Yellow separator line (3px height, 40px width) -->
+<div class="h-[3px] w-[40px] bg-secondary-container mt-xs rounded-full"></div>
+</div>
+<!-- Info list with icons -->
+<div class="flex flex-col gap-sm py-xs border-y border-outline-variant/30">
+<div class="flex items-center gap-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+</div>
+<div class="flex flex-col">
+<span class="font-caption text-caption text-outline uppercase tracking-wider">Localisation</span>
+<span class="font-body text-body text-on-surface">Allée principale</span>
+</div>
+</div>
+<div class="flex items-center gap-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">eco</span>
+</div>
+<div class="flex flex-col">
+<span class="font-caption text-caption text-outline uppercase tracking-wider">Âge estimé</span>
+<span class="font-body text-body text-on-surface">25-35 ans</span>
+</div>
+</div>
+<div class="flex items-center gap-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">height</span>
+</div>
+<div class="flex flex-col">
+<span class="font-caption text-caption text-outline uppercase tracking-wider">Hauteur</span>
+<span class="font-body text-body text-on-surface">~12m</span>
+</div>
+</div>
+<div class="flex items-center gap-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">health_and_safety</span>
+</div>
+<div class="flex flex-col">
+<span class="font-caption text-caption text-outline uppercase tracking-wider">État de santé</span>
+<!-- Health Status (Green "Sain" badge) -->
+<span class="bg-tertiary text-on-tertiary font-caption text-caption px-2 py-0.5 rounded-md inline-block w-max mt-1">Sain</span>
+</div>
+</div>
+</div>
+<!-- Ecology description -->
+<div class="flex flex-col gap-xs">
+<h3 class="font-card-title text-card-title text-on-surface">Écologie</h3>
+<p class="font-body text-body text-on-surface-variant leading-relaxed">
+                        Le manguier est un grand arbre fruitier à feuillage persistant, originaire d'Asie du Sud. Sur le campus, il fournit une ombre dense essentielle pendant la saison chaude et sert d'habitat à de nombreuses espèces d'oiseaux et d'insectes locaux.
+                    </p>
+</div>
+<!-- History: Light vertical timeline -->
+<div class="flex flex-col gap-xs mt-sm">
+<h3 class="font-card-title text-card-title text-on-surface">Historique d'observation</h3>
+<div class="relative pl-sm mt-xs">
+<!-- Vertical line -->
+<div class="absolute left-[11px] top-2 bottom-0 w-[2px] bg-surface-variant"></div>
+<!-- Timeline Items -->
+<div class="flex gap-sm mb-sm relative">
+<div class="w-[6px] h-[6px] rounded-full bg-primary absolute left-[-13px] top-[8px] z-10 ring-4 ring-surface-container-lowest"></div>
+<img class="w-10 h-10 rounded-full object-cover border border-outline-variant bg-surface-variant" data-alt="A small, circular thumbnail photo showing a close-up of a mango tree leaf, bright daylight, high fidelity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoZBxODCh8XzfyA7rwB6dxdGXpGUnzcFN1GnqI1Dl7EUWKH8oYyRjIgtgtdYFXniEGOvB10vvutxsVrKn9-FzYBdImWOw6mZ1r5ddmVDOFM-l_35Irqf9fh3gUrnoD3lLOinAly0TpziF4iycRxlY4pCcVMR_tKrS85mocIxz9tUM_nplnkZilCKSL6Km82oLqcsrB78fjC0RH1R2Mttt1FNkL9rjzPP1ZlQsoUppKDV2XWHutR0cJwjxva7AKGS4MrxYb53jPEZuS"/>
+<div class="flex flex-col justify-center">
+<span class="font-body text-body text-on-surface font-medium">Mise à jour statut</span>
+<span class="font-caption text-caption text-outline">Il y a 2 semaines • par Dr. Ouedraogo</span>
+</div>
+</div>
+<div class="flex gap-sm relative opacity-70">
+<div class="w-[6px] h-[6px] rounded-full bg-outline absolute left-[-13px] top-[8px] z-10 ring-4 ring-surface-container-lowest"></div>
+<img class="w-10 h-10 rounded-full object-cover border border-outline-variant bg-surface-variant" data-alt="A small circular thumbnail of a mango tree trunk, warm sunlight, scientific aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKbQ34wu7Mh0nskBDPvo5IHBSSUVj9hfU5JzXjm834JWkloqnW3yDZCXUbjGrm-eHr1s89nP6ubM0O8_x9JBoUiEGU4bLwu9vKLyJvfJO9PxVtY2kxgjyXcdTYIdfrzcZ-elvP6xnPbmmgDMFSMe6XGfzXjftGiB541heOelynQqOcgsvEw0bsy58UPQ32SjeA603KGVchBrpmtbOz5W-ZEp7ngpm8oBN-0zn2vV5gAMiCyja2Xjk_k1sQqSTu0mGOOH62dNX3iHP7"/>
+<div class="flex flex-col justify-center">
+<span class="font-body text-body text-on-surface font-medium">Première observation</span>
+<span class="font-caption text-caption text-outline">Octobre 2023 • par Étudiant Bio-04</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Spacer -->
+<div class="flex-grow"></div>
+<!-- Controls: Secondary button -->
+<button class="w-full mt-md group flex items-center justify-center gap-sm bg-surface-container hover:bg-surface-variant text-primary border border-outline-variant/50 rounded-[16px] px-md py-3 transition-all shadow-sm hover:shadow-[0_2px_8px_rgba(0,0,0,0.05)]">
+<span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">add_a_photo</span>
+<span class="font-card-title text-card-title">Ajouter une photo de cette espèce</span>
+</button>
+</div>
+</div>
+</div>
